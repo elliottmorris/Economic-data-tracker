@@ -1,0 +1,26 @@
+{
+    "id": "F84FDFF3",
+    "path": "~/github/econ-data-tracker/_scripts/stan-ignore/latent_index.stan",
+    "project_path": "_scripts/stan-ignore/latent_index.stan",
+    "type": "stan",
+    "hash": "691862845",
+    "contents": "",
+    "dirty": false,
+    "created": 1744742702778.0,
+    "source_on_save": true,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "76,39",
+        "scrollLine": "45"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1744746247,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1744746247176,
+    "read_only": false,
+    "read_only_alternatives": []
+}

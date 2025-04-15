@@ -1,0 +1,114 @@
+library(tidyverse)
+library(cmdstanr)
+
+# wrangle data -------------------------------
+# system("Rscript _scripts/01_wrangle_fred.R")
+dat = read_csv('_data/fred_data_wide.csv')  
+
+dat = dat[!is.na(dat$GDP),]
+dat = na.omit(dat)
+
+# get indices for training
+training_rows = which(day(dat$date) == 1)
+
+# detacth date and from dat
+dates = dat$date
+dat$date = NULL
+min(dates)
+# sepearte iout GDP
+
+gdp = dat$GDP
+dat$GDP = NULL
+
+plot(gdp, type = 'l')
+
+plot(apply(dat,1,mean), type = 'l')
+
+# mutate for stan ---------------------------
+# Suppose dat is a T x N matrix (with some NA values)
+T = nrow(dat[training_rows,])
+N = ncol(dat[training_rows,])
+T
+N
+
+N_obs = nrow(dat[training_rows,]) * ncol(dat[training_rows,])
+N_obs
+
+# get vector of time points and indices for training
+t_obs = as.vector(row(dat[training_rows,]))
+t_obs
+i_obs = as.vector(col(dat[training_rows,]))
+i_obs
+y_obs = dat[training_rows,][!is.na(dat[training_rows,])]
+y_obs
+
+# Bundle data for Stan:
+stan_data = list(
+  T = T,
+  N = N,
+  N_obs = N_obs,
+  t_obs = t_obs,
+  i_obs = i_obs,
+  y_obs = y_obs,
+  y_gdp = gdp[training_rows]
+)
+
+# run model -------------------------------
+# point to model and compile it
+model = cmdstanr::cmdstan_model(
+  stan_file = '_scripts/stan-ignore/latent_index.stan',
+  compile = TRUE,
+  #force_recompile = TRUE, # you need to run this once on each new machine
+  stanc_options = list("O1")
+)
+
+# sample!
+fit = model$sample(
+  seed = as.integer(floor(as.numeric(Sys.time()))),
+  data = stan_data,
+  chains = 4,
+  parallel_chains = 4,
+  iter_warmup = 250,
+  iter_sampling = 250,
+  init = 1,
+  refresh = 10
+)
+
+econ_index = fit$summary('F',median)$median
+
+plot(econ_index, type = 'l')
+
+tibble(x = dates[training_rows], f = econ_index, gdp = gdp[training_rows]) %>%
+  ggplot(., aes(x = x)) + 
+  geom_line(aes(y = f, col = 'index')) +
+  geom_line(aes(y = gdp, col = 'gdp')) + 
+  scale_x_date(date_breaks = '4 year', date_labels = '%Y')  +
+  coord_cartesian(xlim=c(ymd('2017-01-01'), Sys.Date()))
+
+
+tibble(x = dates[training_rows],f = econ_index) %>%
+  cbind(dat[training_rows,]) %>%
+  as_tibble() %>%
+  gather(key = 'variable', value = 'value', 2:ncol(.)) %>%
+  ggplot(., aes(x = x, y = value, col = variable)) + 
+  geom_line() + 
+  scale_x_date(date_breaks = '4 year', date_labels = '%Y') +
+  facet_wrap(~variable)
+
+
+tibble(label = names(dat),
+        loading = fit$summary('lambda',median)$median
+) %>% arrange(loading) %>%
+  mutate(label = factor(label),
+         label = fct_reorder(label, loading)) %>%
+  ggplot(., aes(x = loading, y = label)) + 
+  geom_col()
+
+cor(dat[,-1])
+
+fit$summary('rho',median,sd)
+
+# look at gdp regression and fit
+fit$summary(c('alpha','beta','gamma','sigma'),median,sd)
+
+
