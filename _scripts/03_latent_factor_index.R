@@ -7,14 +7,14 @@ dat = read_csv('_data/fred_data_wide.csv')
 
 dat = dat[!is.na(dat$GDP),]
 
-# get indices for training
-training_rows = which(day(dat$date) == 1)
-
 # detacth date and from dat
 dates = dat$date
 dat$date = NULL
 min_date = min(dates)
-times = as.numeric(dates - min_date) + 1
+times = as.numeric(dates - min_date) 
+
+# convert times to weeks
+times = floor(times / 30) + 1
 
 # separate out GDP
 gdp = dat$GDP
@@ -23,12 +23,22 @@ dat$GDP = NULL
 # only keep GDP for pub dates, to avoid overfitting model
 gdp_dates = read_csv('_data/gdp_pub_dates.csv')
 gdp = gdp[dates %in% gdp_dates$date]
-gdp_times = as.numeric(gdp_dates$date - min_date) + 1
+gdp_times = as.numeric(gdp_dates$date - min_date)
 gdp_times = gdp_times[gdp_times>=0]
+gdp_times = floor(gdp_times / 30) + 1
 
 # some EDA
 plot(gdp, type = 'l')
 plot(apply(dat,1,mean,na.rm=T), type = 'l')
+
+
+# set training rows index to something small. needs to include gdp dates
+# get indices for training
+training_rows = tibble(t = times, present = times %in% gdp_times) %>% 
+  mutate(row = row_number()) %>% group_by(t) %>% 
+  filter(row_number() == 1, present) %>%
+  ungroup() %>% pull(row)
+training_rows
 
 # mutate for stan ---------------------------
 # Suppose dat is a D x N matrix (with some NA values)
@@ -57,6 +67,7 @@ y_obs[y_i_missing] = 9999 # fill in
 N_missing / N_obs
 
 # Bundle data for Stan:
+T
 stan_data = list(
   T = T, 
   N = N,
@@ -92,7 +103,7 @@ fit = model$sample(
   parallel_chains = 4,
   iter_warmup = 200,
   iter_sampling = 200,
-  max_depth = 11,
+  max_treedepth = 11,
   init = 1,
   refresh = 10
 )
