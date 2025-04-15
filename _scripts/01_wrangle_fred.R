@@ -3,6 +3,7 @@ library(tidyverse)
 library(fredr)
 library("quantmod")
 library(zoo)
+library(scales)
 
 # in order to use this program you will need to download a key from FRED and then attach it to your R environment by running:
 # fredr::fredr_set_key()
@@ -16,12 +17,14 @@ indicators = tibble(
              "HOUST", "INDPRO", "PAYEMS", "GDPC1",
              "UMCSENT", "UNRATE", "W875RX1",
              "TTLCONS", "RSAFS",
-             "MANEMP", "AMTMNO"),
+             "MANEMP", "AMTMNO",
+             'GCEC1', "NETEXC"),
   label = c("Avg earnings", "Manf. and trade sales", "CPI",
             "Housing starts", "Ind. prdct", "Payrolls", "GDP",
             "Sentiment", "Unemployment", "Income excl transfers",
             "Total construction spending", "Retail trade and food services sales", 
-            "Manufacturing jobs", "New manufactruing orders")
+            "Manufacturing jobs", "New manufactruing orders",
+            "Gov. expenditures and investment","Net exports")
 )
 
 # read in data from fred api
@@ -76,7 +79,7 @@ fred_raw %>%
 fred_raw %>%
   group_by(label) %>%
   filter(!is.na(value)) %>%
-  filter(row_number() >= (n() -6)) %>%
+  filter(row_number() >= (n() - 12)) %>%
   ggplot(., aes(x=date,y=value)) + 
   geom_line() + 
   facet_wrap(~label,scales="free") + 
@@ -135,6 +138,14 @@ fred_raw = fred_raw %>%
 ) %>%
   ungroup()
 
+# rescale net exports
+plot(fred_raw[fred_raw$label == 'Net exports',]$value)
+fred_raw[fred_raw$label == 'Net exports',]$value = 
+  rescale(x = fred_raw[fred_raw$label == 'Net exports',]$value, 
+          to = c(0, 100),
+          from = range(fred_raw[fred_raw$label == 'Net exports',]$value, na.rm = T)) + 
+  50
+plot(fred_raw[fred_raw$label == 'Net exports',]$value)
 
 # compute annual growth -------------------------------------------------------
 fred = 
@@ -146,15 +157,13 @@ fred =
   group_by(label) %>%
   mutate(growth =  if_else(label %in% c("GDP"),
                       ( (value / lag(value, 365) ) - 1 ) * 100,
-  #                  ((((value / lag(value,182))^2)-1)*100) *0.2 + 
-  #                  ( ((value / lag(value, 365) ) - 1 ) * 100 )*0.50 + 
-  #                  ( ((value / lag(value, 730) ) - 1 ) * 100 )*0.3
-                      ( (value / lag(value, 365) ) - 1 ) * 100,
+                   ( (((value / lag(value,182))^2) - 1 )*100 ) *0.2 +
+                   ( ((value / lag(value, 365) ) - 1 )*100 ) *0.8
                 )
           )%>% 
   ungroup() 
 
-tail(fred$growth)
+plot(fred[fred$label == 'Net exports',]$growth)
 
 # adjust growth in wages for change in cpi
 cpi_deflator = fred %>% filter(label == "CPI") %>% select(date, deflator = growth) %>%
