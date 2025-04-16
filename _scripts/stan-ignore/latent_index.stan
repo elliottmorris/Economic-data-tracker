@@ -9,50 +9,59 @@ data {
     array[N_obs] int<lower=1, upper=N> i_obs;  // Variable index for each observed data point.
     vector[N_obs] y_obs;             // Observed data for these indices.
     
+    vector[T] prior_f_t; // prior for f across all t vallues
+    
     int<lower=1> N_gdp_obs;
     vector[N_gdp_obs] y_gdp;             // Observed gdp growth 
     array[N_gdp_obs] int<lower=1,upper=T> gdp_t;        // time at observation
-    
-    int<lower=0> N_missing; // number of missing observations
-    array[N_missing] int y_i_missing; // index of missingness for y_obs
-    int<lower=0> N_not_missing; // number of non-missing observations
-    array[N_not_missing] int y_i_not_missing; // index of non-missingness for y_obs
-    
 }
 
 parameters {
     real<lower=3, upper=20> nu;              // Degrees of freedom for response variable
     vector[T] f_std;                     // Latent factor (the index) for each time point.
-    vector[N] mu;                    // Intercepts for each variable.
+    vector[N-1] mu_raw;                    // Intercepts for each variable.
+    real<lower=1e-6,upper=10> mu_sigma;
     vector<lower=0,upper=1>[N] lambda;                // Loadings for each variable.
     real<lower=0.01, upper=10> sigma_y;           // Measurement error standard deviation.
     real<lower=0.01, upper=10> sigma_f;           // State noise standard deviation for f.
+    
+    // coefficients for the stoch vol ar
+    // vector<lower=1e-06,upper=1>[T] f_vol;                     // Latent factor (the index) for each time point.
+    // real vol_ar_alpha;                 // AR intercept
+    // real<lower=0.8, upper=1> vol_rho;     // AR(1) coefficient for f.
+    // 
+    // coefficients for the factor ar
     real ar_alpha;                 // AR intercept
     real<lower=0.8, upper=1> rho;     // AR(1) coefficient for f.
-
-    // fill in missing observations for factors
-    // vector[N_missing] y_missing;             
-    
+    real<lower=1e-06, upper = 10> ar_sigma;
     // robust regression to predict GDP given factor
     real<lower=0> alpha_raw;
-    real<lower=0, upper=1> alpha_scale;
+    real<lower=1e-06, upper=1> alpha_scale;
     real<lower=0> beta_raw;
-    real<lower=0, upper=1> beta_scale;
+    real<lower=1e-06, upper=1> beta_scale;
     real<lower=0,upper=2> gamma;
-    real<lower=0.001,upper=10> sigma;
 }
 
 transformed parameters {
+    // Intercepts for each variable.
+    vector[N] mu;  
+    mu[1] = 0;
+    mu[2:N] = mu_raw * mu_sigma;
+  
     // Scale the latent factor by sigma
     vector[T] f = f_std * sigma_f;
-
+    
+    real mu_lambda = mean(lambda);
+    real sd_lambda = sd(lambda);
+    real lambda_minmax = min(lambda) / max(lambda);
+    
     // Observation model: Vectorize by computing the predicted value for each observation.
     // Note: mu[i_obs] and lambda[i_obs] index the vectors mu and lambda with the observed variable indices.
     vector[N_obs] y_hat;
     y_hat = mu[i_obs] + elt_multiply(lambda[i_obs], f[t_obs]);
     
     
-    // container for gdp growth
+    // // container for gdp growth
     vector[N_gdp_obs] f_quarterly_gdp_t;
     for(i in 1:N_gdp_obs){
       {
@@ -61,18 +70,23 @@ transformed parameters {
       }
     }
     
-    real alpha = 2.6 + (alpha_raw * alpha_scale);
+    real alpha = 2 + (alpha_raw * alpha_scale);
     real beta = beta_raw * beta_scale;
 }
 
 model {
     // Priors for factor model
     nu ~ cauchy(0,1);
-    mu ~ std_normal();
-    lambda ~ std_normal();
+    mu_raw ~ std_normal();
+    mu_sigma ~ std_normal();
+    lambda ~ normal(0, 1);
     sigma_y ~ std_normal();
     sigma_f ~ std_normal();
-    rho ~ std_normal();
+    
+    // Priors on qualities of lambda
+    mu_lambda ~ normal(0.5, 0.1);
+    sd_lambda ~ normal(0.1, 0.1);
+    lambda_minmax ~ normal(5, 5);
     
     // Priors for GDP forecast
     alpha_raw ~ std_normal();
@@ -80,21 +94,29 @@ model {
     beta_raw ~ std_normal();
     beta_scale ~ std_normal();
     gamma ~ std_normal();
-    sigma ~ normal(0,0.1);
 
-    // Latent factor evolution: vectorized AR(1) specification.
+    // Latent factor evolution: vectorized AR(1) specifications. informative prior 
+    f ~ normal(prior_f_t, 2);
+    
+    // vol_ar_alpha ~ std_normal();
+    // vol_rho ~ std_normal();
+    // f_vol[1] ~ std_normal();
+    // f_vol[2:T] ~ normal(vol_ar_alpha + vol_rho * f_vol[1:(T-1)], 0.1);
+    
     ar_alpha ~ std_normal();
+    rho ~ std_normal();
+    ar_sigma ~ std_normal();
     f_std[1] ~ std_normal();
-    f_std[2:T] ~ normal(ar_alpha + rho * f_std[1:(T-1)], 0.1);
+    f_std[2:T] ~ student_t(4, ar_alpha + rho * f_std[1:(T-1)], ar_sigma); // f_vol[2:T]);
 
     // Likelihood
-    //// economic observations -- only on non-missing data
-    y_obs[y_i_not_missing] ~ student_t(nu, y_hat[y_i_not_missing], sigma_y); 
-    // // gdp now-cast, robust to noise. have to sum over month t to t+ 2
+    //// economic observations 
+    y_obs ~ student_t(nu, y_hat, sigma_y); 
+    // gdp now-cast, robust to noise. have to sum over month t to t+ 2
     y_gdp ~ normal(alpha +
                         beta * f_quarterly_gdp_t +
                         gamma * f_quarterly_gdp_t^2,
-                      sigma);
+                      1);
 }
 
 generated quantities {

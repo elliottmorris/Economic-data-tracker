@@ -18,13 +18,14 @@ indicators = tibble(
              "UMCSENT", "UNRATE", "W875RX1",
              "TTLCONS", "RSAFS",
              "MANEMP", "AMTMNO",
-             'GCEC1', "NETEXC"),
+             'GCEC1', "EXPGSC1","IMPGSC1","BUSINV"),
   label = c("Avg earnings", "Manf. and trade sales", "CPI",
             "Housing starts", "Ind. prdct", "Payrolls", "GDP",
             "Sentiment", "Unemployment", "Income excl transfers",
             "Total construction spending", "Retail trade and food services sales", 
             "Manufacturing jobs", "New manufactruing orders",
-            "Gov. expenditures and investment","Net exports")
+            "Gov. expenditures and investment","Exports","Imports",
+            "Business inventories")
 )
 
 # read in data from fred api
@@ -113,6 +114,7 @@ fred_raw %>%
 gdp_dates = fred_raw %>% filter(label == 'GDP', !is.na(value)) %>% select(date)
 write_csv(gdp_dates, '_data/gdp_pub_dates.csv')
 fred_raw = fred_raw %>%
+  mutate(release_date_data = ifelse(is.na(value), 0, 1)) %>%
   group_by(label) %>%
   mutate(value = na.approx(value, na.rm=F)) %>%
   mutate(value = na.locf(value, na.rm=F)) %>%
@@ -138,14 +140,6 @@ fred_raw = fred_raw %>%
 ) %>%
   ungroup()
 
-# rescale net exports
-plot(fred_raw[fred_raw$label == 'Net exports',]$value)
-fred_raw[fred_raw$label == 'Net exports',]$value = 
-  rescale(x = fred_raw[fred_raw$label == 'Net exports',]$value, 
-          to = c(0, 100),
-          from = range(fred_raw[fred_raw$label == 'Net exports',]$value, na.rm = T)) + 
-  50
-plot(fred_raw[fred_raw$label == 'Net exports',]$value)
 
 # compute annual growth -------------------------------------------------------
 fred = 
@@ -163,7 +157,6 @@ fred =
           )%>% 
   ungroup() 
 
-plot(fred[fred$label == 'Net exports',]$growth)
 
 # adjust growth in wages for change in cpi
 cpi_deflator = fred %>% filter(label == "CPI") %>% select(date, deflator = growth) %>%
@@ -217,13 +210,6 @@ fred = fred %>%
                               pmax(-5,pmin(5,std_growth)))
 ) 
 
-
-# invert certain series 
-fred = fred %>%
-  mutate(std_growth = ifelse(label %in% c("CPI", "Unemployment"),
-                         std_growth * -1, 
-                         std_growth))
-
 gg = fred %>%
   ggplot(., aes(x=date,y=std_growth)) + 
   geom_line() + 
@@ -243,9 +229,8 @@ gg = fred %>%
 print(gg)
 
 # write output ----------------------------------------------------------------
+# wide output, no missingness
 fred_wide = fred %>% 
-  # we want to keep raw values for the trade deficit
-  mutate(std_growth = if_else(label == "U.S. Trade Deficit", value, std_growth)) %>%
   # continue
   select(date, label, std_growth) %>%
   group_by(date, label) %>%
@@ -257,3 +242,19 @@ fred_wide = fred %>%
 fred_wide
 ncol(fred_wide) * nrow(fred_wide)
 write_csv(fred_wide,"_data/fred_data_wide.csv")
+
+# wide output, missingness
+# long output, no missingness
+fred_wide = fred %>% 
+  mutate(std_growth = if_else(release_date_data == 1, std_growth, NA)) %>%
+  # continue
+  select(date, label, std_growth) %>%
+  group_by(date, label) %>%
+  summarise(std_growth = mean(std_growth, na.rm = T)) %>%
+  ungroup() %>%
+  spread(label, std_growth)  %>%
+  filter(date >= ymd('1946-01-01')) # date of first observation
+
+fred_wide
+ncol(fred_wide) * nrow(fred_wide)
+write_csv(fred_wide,"_data/fred_data_wide_with_missing.csv")

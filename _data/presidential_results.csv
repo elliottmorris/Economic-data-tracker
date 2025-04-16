@@ -1,0 +1,1030 @@
+year,state,dem_votes,gop_votes,ind_votes,source
+1948,Alabama,0,"40,930","174,050",https://uselectionatlas.org/RESULTS/
+1948,Arizona,"95,251","77,597","4,217",https://uselectionatlas.org/RESULTS/
+1948,Arkansas,"149,659","50,959","41,857",https://uselectionatlas.org/RESULTS/
+1948,California,"1,913,134","1,895,269","213,135",https://uselectionatlas.org/RESULTS/
+1948,Colorado,"267,288","239,714","8,235",https://uselectionatlas.org/RESULTS/
+1948,Connecticut,"423,297","437,754","22,467",https://uselectionatlas.org/RESULTS/
+1948,Delaware,"67,813","69,588","1,672",https://uselectionatlas.org/RESULTS/
+1948,Florida,"281,988","194,280","101,375",https://uselectionatlas.org/RESULTS/
+1948,Georgia,"254,646","76,691","87,427",https://uselectionatlas.org/RESULTS/
+1948,Idaho,"107,370","101,514","5,932",https://uselectionatlas.org/RESULTS/
+1948,Illinois,"1,994,715","1,961,103","28,228",https://uselectionatlas.org/RESULTS/
+1948,Indiana,"807,833","821,079","27,302",https://uselectionatlas.org/RESULTS/
+1948,Iowa,"522,380","494,018","21,874",https://uselectionatlas.org/RESULTS/
+1948,Kansas,"351,902","423,039","13,878",https://uselectionatlas.org/RESULTS/
+1948,Kentucky,"466,756","341,210","14,692",https://uselectionatlas.org/RESULTS/
+1948,Louisiana,"136,344","72,657","207,335",https://uselectionatlas.org/RESULTS/
+1948,Maine,"111,916","150,234","2,639",https://uselectionatlas.org/RESULTS/
+1948,Maryland,"286,521","294,814","15,400",https://uselectionatlas.org/RESULTS/
+1948,Massachusetts,"1,151,788","909,370","45,988",https://uselectionatlas.org/RESULTS/
+1948,Michigan,"1,003,448","1,038,595","67,566",https://uselectionatlas.org/RESULTS/
+1948,Minnesota,"692,966","483,617","35,643",https://uselectionatlas.org/RESULTS/
+1948,Mississippi,"19,384","5,043","167,763",https://uselectionatlas.org/RESULTS/
+1948,Missouri,"917,315","655,039","6,274",https://uselectionatlas.org/RESULTS/
+1948,Montana,"119,071","96,770","8,437",https://uselectionatlas.org/RESULTS/
+1948,Nebraska,"224,165","264,774",1,https://uselectionatlas.org/RESULTS/
+1948,Nevada,"31,291","29,357","1,469",https://uselectionatlas.org/RESULTS/
+1948,New Hampshire,"107,995","121,299","2,146",https://uselectionatlas.org/RESULTS/
+1948,New Jersey,"895,455","981,124","72,976",https://uselectionatlas.org/RESULTS/
+1948,New Mexico,"105,464","80,303","1,296",https://uselectionatlas.org/RESULTS/
+1948,New York,"2,780,204","2,841,163","557,135",https://uselectionatlas.org/RESULTS/
+1948,North Carolina,"459,070","258,572","73,567",https://uselectionatlas.org/RESULTS/
+1948,North Dakota,"95,812","115,139","9,765",https://uselectionatlas.org/RESULTS/
+1948,Ohio,"1,452,791","1,445,684","37,596",https://uselectionatlas.org/RESULTS/
+1948,Oklahoma,"452,782","268,817",0,https://uselectionatlas.org/RESULTS/
+1948,Oregon,"243,147","260,904","20,029",https://uselectionatlas.org/RESULTS/
+1948,Pennsylvania,"1,752,426","1,902,197","80,525",https://uselectionatlas.org/RESULTS/
+1948,Rhode Island,"188,736","135,787","3,179",https://uselectionatlas.org/RESULTS/
+1948,South Carolina,"34,423","5,386","102,762",https://uselectionatlas.org/RESULTS/
+1948,South Dakota,"117,653","129,651","2,801",https://uselectionatlas.org/RESULTS/
+1948,Tennessee,"270,402","202,914","76,967",https://uselectionatlas.org/RESULTS/
+1948,Texas,"824,235","303,467","121,730",https://uselectionatlas.org/RESULTS/
+1948,Utah,"149,151","124,402","2,752",https://uselectionatlas.org/RESULTS/
+1948,Vermont,"45,557","75,926","1,899",https://uselectionatlas.org/RESULTS/
+1948,Virginia,"200,786","172,070","46,400",https://uselectionatlas.org/RESULTS/
+1948,Washington,"476,165","386,315","42,579",https://uselectionatlas.org/RESULTS/
+1948,West Virginia,"429,188","316,251","3,311",https://uselectionatlas.org/RESULTS/
+1948,Wisconsin,"647,310","590,959","38,531",https://uselectionatlas.org/RESULTS/
+1948,Wyoming,"52,354","47,947","1,124",https://uselectionatlas.org/RESULTS/
+1948,,"24,179,347","21,991,292","2,623,926",https://uselectionatlas.org/RESULTS/
+1952,Alabama,"275,075","149,231","1,814",https://uselectionatlas.org/RESULTS/
+1952,Arizona,"108,528","152,042",0,https://uselectionatlas.org/RESULTS/
+1952,Arkansas,"226,300","177,155","1,345",https://uselectionatlas.org/RESULTS/
+1952,California,"2,197,548","2,897,310","46,991",https://uselectionatlas.org/RESULTS/
+1952,Colorado,"245,504","379,782","4,817",https://uselectionatlas.org/RESULTS/
+1952,Connecticut,"481,649","611,012","4,250",https://uselectionatlas.org/RESULTS/
+1952,Delaware,"83,315","90,059",651,https://uselectionatlas.org/RESULTS/
+1952,Florida,"444,950","544,036",351,https://uselectionatlas.org/RESULTS/
+1952,Georgia,"456,823","198,979",1,https://uselectionatlas.org/RESULTS/
+1952,Idaho,"95,081","180,707",466,https://uselectionatlas.org/RESULTS/
+1952,Illinois,"2,013,920","2,457,327","9,811",https://uselectionatlas.org/RESULTS/
+1952,Indiana,"801,530","1,136,259","17,536",https://uselectionatlas.org/RESULTS/
+1952,Iowa,"451,513","808,906","8,354",https://uselectionatlas.org/RESULTS/
+1952,Kansas,"273,296","616,302","6,568",https://uselectionatlas.org/RESULTS/
+1952,Kentucky,"495,729","495,029","2,390",https://uselectionatlas.org/RESULTS/
+1952,Louisiana,"345,027","306,925",0,https://uselectionatlas.org/RESULTS/
+1952,Maine,"118,806","232,353",627,https://uselectionatlas.org/RESULTS/
+1952,Maryland,"395,337","499,424","7,313",https://uselectionatlas.org/RESULTS/
+1952,Massachusetts,"1,083,525","1,292,325","7,548",https://uselectionatlas.org/RESULTS/
+1952,Michigan,"1,230,657","1,551,529","16,406",https://uselectionatlas.org/RESULTS/
+1952,Minnesota,"608,458","763,211","7,814",https://uselectionatlas.org/RESULTS/
+1952,Mississippi,"172,566","112,966",0,https://uselectionatlas.org/RESULTS/
+1952,Missouri,"929,830","959,429","2,803",https://uselectionatlas.org/RESULTS/
+1952,Montana,"106,213","157,394","1,430",https://uselectionatlas.org/RESULTS/
+1952,Nebraska,"188,057","421,603",0,https://uselectionatlas.org/RESULTS/
+1952,Nevada,"31,688","50,502",0,https://uselectionatlas.org/RESULTS/
+1952,New Hampshire,"106,663","166,287",0,https://uselectionatlas.org/RESULTS/
+1952,New Jersey,"1,015,902","1,374,613","29,039",https://uselectionatlas.org/RESULTS/
+1952,New Mexico,"105,661","132,170",777,https://uselectionatlas.org/RESULTS/
+1952,New York,"3,104,601","3,952,815","70,825",https://uselectionatlas.org/RESULTS/
+1952,North Carolina,"652,803","558,107",0,https://uselectionatlas.org/RESULTS/
+1952,North Dakota,"76,694","191,712","1,721",https://uselectionatlas.org/RESULTS/
+1952,Ohio,"1,600,367","2,100,391",0,https://uselectionatlas.org/RESULTS/
+1952,Oklahoma,"430,939","518,045",0,https://uselectionatlas.org/RESULTS/
+1952,Oregon,"270,579","420,815","3,665",https://uselectionatlas.org/RESULTS/
+1952,Pennsylvania,"2,146,269","2,415,789","18,911",https://uselectionatlas.org/RESULTS/
+1952,Rhode Island,"203,293","210,935",270,https://uselectionatlas.org/RESULTS/
+1952,South Carolina,"173,004","168,082",0,https://uselectionatlas.org/RESULTS/
+1952,South Dakota,"90,426","203,857",0,https://uselectionatlas.org/RESULTS/
+1952,Tennessee,"443,710","446,147","2,696",https://uselectionatlas.org/RESULTS/
+1952,Texas,"969,228","1,102,878","3,840",https://uselectionatlas.org/RESULTS/
+1952,Utah,"135,364","194,190",0,https://uselectionatlas.org/RESULTS/
+1952,Vermont,"43,355","109,717",485,https://uselectionatlas.org/RESULTS/
+1952,Virginia,"268,677","349,037","1,975",https://uselectionatlas.org/RESULTS/
+1952,Washington,"492,845","599,107","10,756",https://uselectionatlas.org/RESULTS/
+1952,West Virginia,"453,578","419,970",0,https://uselectionatlas.org/RESULTS/
+1952,Wisconsin,"622,175","979,744","5,451",https://uselectionatlas.org/RESULTS/
+1952,Wyoming,"47,934","81,047",270,https://uselectionatlas.org/RESULTS/
+1952,,"27,314,992","33,937,252","299,967",https://uselectionatlas.org/RESULTS/
+1956,Alabama,"280,844","195,694","20,333",https://uselectionatlas.org/RESULTS/
+1956,Arizona,"112,880","176,990",303,https://uselectionatlas.org/RESULTS/
+1956,Arkansas,"213,277","186,287","7,008",https://uselectionatlas.org/RESULTS/
+1956,California,"2,420,135","3,027,668","18,552",https://uselectionatlas.org/RESULTS/
+1956,Colorado,"263,997","394,479","4,598",https://uselectionatlas.org/RESULTS/
+1956,Connecticut,"405,079","711,837",205,https://uselectionatlas.org/RESULTS/
+1956,Delaware,"79,421","98,057",510,https://uselectionatlas.org/RESULTS/
+1956,Florida,"480,371","643,849",0,https://uselectionatlas.org/RESULTS/
+1956,Georgia,"441,094","216,652","5,734",https://uselectionatlas.org/RESULTS/
+1956,Idaho,"105,868","166,979",142,https://uselectionatlas.org/RESULTS/
+1956,Illinois,"1,775,682","2,623,327","8,398",https://uselectionatlas.org/RESULTS/
+1956,Indiana,"783,908","1,182,811","7,888",https://uselectionatlas.org/RESULTS/
+1956,Iowa,"501,858","729,187","3,519",https://uselectionatlas.org/RESULTS/
+1956,Kansas,"296,317","566,878","3,048",https://uselectionatlas.org/RESULTS/
+1956,Kentucky,"476,453","572,192","5,160",https://uselectionatlas.org/RESULTS/
+1956,Louisiana,"243,977","329,047","44,520",https://uselectionatlas.org/RESULTS/
+1956,Maine,"102,468","249,238",0,https://uselectionatlas.org/RESULTS/
+1956,Maryland,"372,613","559,738",0,https://uselectionatlas.org/RESULTS/
+1956,Massachusetts,"948,190","1,393,197","7,119",https://uselectionatlas.org/RESULTS/
+1956,Michigan,"1,359,898","1,713,647","6,923",https://uselectionatlas.org/RESULTS/
+1956,Minnesota,"617,525","719,302","3,178",https://uselectionatlas.org/RESULTS/
+1956,Mississippi,"144,498","60,685","42,966",https://uselectionatlas.org/RESULTS/
+1956,Missouri,"918,273","914,289",0,https://uselectionatlas.org/RESULTS/
+1956,Montana,"116,238","154,933",0,https://uselectionatlas.org/RESULTS/
+1956,Nebraska,"199,029","378,108",0,https://uselectionatlas.org/RESULTS/
+1956,Nevada,"40,640","56,049",0,https://uselectionatlas.org/RESULTS/
+1956,New Hampshire,"90,364","176,519",111,https://uselectionatlas.org/RESULTS/
+1956,New Jersey,"850,337","1,606,942","27,033",https://uselectionatlas.org/RESULTS/
+1956,New Mexico,"106,098","146,788","1,040",https://uselectionatlas.org/RESULTS/
+1956,New York,"2,750,769","4,340,340","2,227",https://uselectionatlas.org/RESULTS/
+1956,North Carolina,"590,530","575,062",0,https://uselectionatlas.org/RESULTS/
+1956,North Dakota,"96,742","156,766",483,https://uselectionatlas.org/RESULTS/
+1956,Ohio,"1,439,655","2,262,610",0,https://uselectionatlas.org/RESULTS/
+1956,Oklahoma,"385,581","473,769",0,https://uselectionatlas.org/RESULTS/
+1956,Oregon,"329,204","406,393",0,https://uselectionatlas.org/RESULTS/
+1956,Pennsylvania,"1,981,769","2,585,252","9,482",https://uselectionatlas.org/RESULTS/
+1956,Rhode Island,"161,790","225,819",2,https://uselectionatlas.org/RESULTS/
+1956,South Carolina,"136,372","75,700","88,511",https://uselectionatlas.org/RESULTS/
+1956,South Dakota,"122,288","171,569",0,https://uselectionatlas.org/RESULTS/
+1956,Tennessee,"456,507","462,288","20,609",https://uselectionatlas.org/RESULTS/
+1956,Texas,"859,958","1,080,619","14,968",https://uselectionatlas.org/RESULTS/
+1956,Utah,"118,364","215,631",0,https://uselectionatlas.org/RESULTS/
+1956,Vermont,"42,549","110,390",39,https://uselectionatlas.org/RESULTS/
+1956,Virginia,"267,760","386,459","43,759",https://uselectionatlas.org/RESULTS/
+1956,Washington,"523,002","620,430","7,457",https://uselectionatlas.org/RESULTS/
+1956,West Virginia,"381,534","449,297",0,https://uselectionatlas.org/RESULTS/
+1956,Wisconsin,"586,768","954,844","8,946",https://uselectionatlas.org/RESULTS/
+1956,Wyoming,"49,554","74,573",0,https://uselectionatlas.org/RESULTS/
+1956,,"26,028,028","35,579,180","414,771",https://uselectionatlas.org/RESULTS/
+1960,Alabama,"318,303","237,981","8,189",https://uselectionatlas.org/RESULTS/
+1960,Alaska,"29,809","30,953",0,https://uselectionatlas.org/RESULTS/
+1960,Arizona,"176,781","221,241",469,https://uselectionatlas.org/RESULTS/
+1960,Arkansas,"215,049","184,508","28,952",https://uselectionatlas.org/RESULTS/
+1960,California,"3,224,099","3,259,722","22,757",https://uselectionatlas.org/RESULTS/
+1960,Colorado,"330,629","402,242","3,375",https://uselectionatlas.org/RESULTS/
+1960,Connecticut,"657,055","565,813",15,https://uselectionatlas.org/RESULTS/
+1960,Delaware,"99,590","96,373",720,https://uselectionatlas.org/RESULTS/
+1960,Florida,"748,700","795,476",0,https://uselectionatlas.org/RESULTS/
+1960,Georgia,"458,638","274,472",239,https://uselectionatlas.org/RESULTS/
+1960,Hawaii,"92,410","92,295",0,https://uselectionatlas.org/RESULTS/
+1960,Idaho,"138,853","161,597",0,https://uselectionatlas.org/RESULTS/
+1960,Illinois,"2,377,846","2,368,988","10,575",https://uselectionatlas.org/RESULTS/
+1960,Indiana,"952,358","1,175,120","7,882",https://uselectionatlas.org/RESULTS/
+1960,Iowa,"550,565","722,381",864,https://uselectionatlas.org/RESULTS/
+1960,Kansas,"363,213","561,474","4,138",https://uselectionatlas.org/RESULTS/
+1960,Kentucky,"521,855","602,607",0,https://uselectionatlas.org/RESULTS/
+1960,Louisiana,"407,339","230,980","169,572",https://uselectionatlas.org/RESULTS/
+1960,Maine,"181,159","240,608",6,https://uselectionatlas.org/RESULTS/
+1960,Maryland,"565,808","489,538",3,https://uselectionatlas.org/RESULTS/
+1960,Massachusetts,"1,487,174","976,750","5,556",https://uselectionatlas.org/RESULTS/
+1960,Michigan,"1,687,269","1,620,428","10,400",https://uselectionatlas.org/RESULTS/
+1960,Minnesota,"779,933","757,915","4,039",https://uselectionatlas.org/RESULTS/
+1960,Mississippi,"108,362","73,561","116,248",https://uselectionatlas.org/RESULTS/
+1960,Missouri,"972,201","962,221",0,https://uselectionatlas.org/RESULTS/
+1960,Montana,"134,891","141,841",847,https://uselectionatlas.org/RESULTS/
+1960,Nebraska,"232,542","380,553",0,https://uselectionatlas.org/RESULTS/
+1960,Nevada,"54,880","52,387",0,https://uselectionatlas.org/RESULTS/
+1960,New Hampshire,"137,772","157,989",0,https://uselectionatlas.org/RESULTS/
+1960,New Jersey,"1,385,415","1,363,324","24,372",https://uselectionatlas.org/RESULTS/
+1960,New Mexico,"156,027","153,733","1,347",https://uselectionatlas.org/RESULTS/
+1960,New York,"3,830,085","3,446,419","14,575",https://uselectionatlas.org/RESULTS/
+1960,North Carolina,"713,136","655,420",0,https://uselectionatlas.org/RESULTS/
+1960,North Dakota,"123,963","154,310",158,https://uselectionatlas.org/RESULTS/
+1960,Ohio,"1,944,248","2,217,611",0,https://uselectionatlas.org/RESULTS/
+1960,Oklahoma,"370,111","533,039",0,https://uselectionatlas.org/RESULTS/
+1960,Oregon,"367,402","408,060",959,https://uselectionatlas.org/RESULTS/
+1960,Pennsylvania,"2,556,282","2,439,956","10,303",https://uselectionatlas.org/RESULTS/
+1960,Rhode Island,"258,032","147,502",1,https://uselectionatlas.org/RESULTS/
+1960,South Carolina,"198,129","188,558",1,https://uselectionatlas.org/RESULTS/
+1960,South Dakota,"128,070","178,417",0,https://uselectionatlas.org/RESULTS/
+1960,Tennessee,"481,453","556,577","13,762",https://uselectionatlas.org/RESULTS/
+1960,Texas,"1,167,567","1,121,310","22,207",https://uselectionatlas.org/RESULTS/
+1960,Utah,"169,248","205,361",100,https://uselectionatlas.org/RESULTS/
+1960,Vermont,"69,186","98,131",7,https://uselectionatlas.org/RESULTS/
+1960,Virginia,"362,327","404,521","4,601",https://uselectionatlas.org/RESULTS/
+1960,Washington,"599,298","629,273","13,001",https://uselectionatlas.org/RESULTS/
+1960,West Virginia,"441,786","395,995",0,https://uselectionatlas.org/RESULTS/
+1960,Wisconsin,"830,805","895,175","3,102",https://uselectionatlas.org/RESULTS/
+1960,Wyoming,"63,331","77,451",0,https://uselectionatlas.org/RESULTS/
+1960,,"34,220,984","34,108,157","503,342",https://uselectionatlas.org/RESULTS/
+1964,Alabama,0,"479,085","210,732",https://uselectionatlas.org/RESULTS/
+1964,Alaska,"44,329","22,930",0,https://uselectionatlas.org/RESULTS/
+1964,Arizona,"237,753","242,535",482,https://uselectionatlas.org/RESULTS/
+1964,Arkansas,"314,197","243,264","2,965",https://uselectionatlas.org/RESULTS/
+1964,California,"4,171,877","2,879,108","6,601",https://uselectionatlas.org/RESULTS/
+1964,Colorado,"476,024","296,767","4,195",https://uselectionatlas.org/RESULTS/
+1964,Connecticut,"826,269","390,996","1,313",https://uselectionatlas.org/RESULTS/
+1964,Delaware,"122,704","78,078",538,https://uselectionatlas.org/RESULTS/
+1964,District of Columbia,"169,796","28,801",0,https://uselectionatlas.org/RESULTS/
+1964,Florida,"948,540","905,941",0,https://uselectionatlas.org/RESULTS/
+1964,Georgia,"522,557","616,584",195,https://uselectionatlas.org/RESULTS/
+1964,Hawaii,"163,249","44,022",0,https://uselectionatlas.org/RESULTS/
+1964,Idaho,"148,920","143,557",0,https://uselectionatlas.org/RESULTS/
+1964,Illinois,"2,796,833","1,905,946",62,https://uselectionatlas.org/RESULTS/
+1964,Indiana,"1,170,848","911,118","9,640",https://uselectionatlas.org/RESULTS/
+1964,Iowa,"733,030","449,148","2,361",https://uselectionatlas.org/RESULTS/
+1964,Kansas,"464,028","386,579","7,294",https://uselectionatlas.org/RESULTS/
+1964,Kentucky,"669,659","372,977","3,469",https://uselectionatlas.org/RESULTS/
+1964,Louisiana,"387,068","509,225",0,https://uselectionatlas.org/RESULTS/
+1964,Maine,"262,264","118,701",256,https://uselectionatlas.org/RESULTS/
+1964,Maryland,"730,912","385,495",50,https://uselectionatlas.org/RESULTS/
+1964,Massachusetts,"1,786,422","549,727","8,649",https://uselectionatlas.org/RESULTS/
+1964,Michigan,"2,136,615","1,060,152","6,335",https://uselectionatlas.org/RESULTS/
+1964,Minnesota,"991,117","559,624","3,721",https://uselectionatlas.org/RESULTS/
+1964,Mississippi,"52,618","356,528",0,https://uselectionatlas.org/RESULTS/
+1964,Missouri,"1,164,344","653,535",0,https://uselectionatlas.org/RESULTS/
+1964,Montana,"164,246","113,032","1,350",https://uselectionatlas.org/RESULTS/
+1964,Nebraska,"307,307","276,847",0,https://uselectionatlas.org/RESULTS/
+1964,Nevada,"79,339","56,094",0,https://uselectionatlas.org/RESULTS/
+1964,New Hampshire,"184,064","104,029",0,https://uselectionatlas.org/RESULTS/
+1964,New Jersey,"1,867,671","963,843","15,256",https://uselectionatlas.org/RESULTS/
+1964,New Mexico,"194,017","131,838","1,760",https://uselectionatlas.org/RESULTS/
+1964,New York,"4,913,156","2,243,559","9,300",https://uselectionatlas.org/RESULTS/
+1964,North Carolina,"800,139","624,844",0,https://uselectionatlas.org/RESULTS/
+1964,North Dakota,"149,784","108,207",398,https://uselectionatlas.org/RESULTS/
+1964,Ohio,"2,498,331","1,470,865",0,https://uselectionatlas.org/RESULTS/
+1964,Oklahoma,"519,834","412,665",0,https://uselectionatlas.org/RESULTS/
+1964,Oregon,"501,017","282,779","2,509",https://uselectionatlas.org/RESULTS/
+1964,Pennsylvania,"3,130,954","1,673,657","18,079",https://uselectionatlas.org/RESULTS/
+1964,Rhode Island,"315,463","74,615",13,https://uselectionatlas.org/RESULTS/
+1964,South Carolina,"215,700","309,048",8,https://uselectionatlas.org/RESULTS/
+1964,South Dakota,"163,010","130,108",0,https://uselectionatlas.org/RESULTS/
+1964,Tennessee,"634,947","508,965",34,https://uselectionatlas.org/RESULTS/
+1964,Texas,"1,663,185","958,566","5,060",https://uselectionatlas.org/RESULTS/
+1964,Utah,"219,628","180,682",0,https://uselectionatlas.org/RESULTS/
+1964,Vermont,"108,127","54,942",20,https://uselectionatlas.org/RESULTS/
+1964,Virginia,"558,038","481,334","2,895",https://uselectionatlas.org/RESULTS/
+1964,Washington,"779,881","470,366","8,309",https://uselectionatlas.org/RESULTS/
+1964,West Virginia,"538,087","253,953",0,https://uselectionatlas.org/RESULTS/
+1964,Wisconsin,"1,050,424","638,495","2,896",https://uselectionatlas.org/RESULTS/
+1964,Wyoming,"80,718","61,998",0,https://uselectionatlas.org/RESULTS/
+1964,,"43,129,040","27,175,754","336,745",https://uselectionatlas.org/RESULTS/
+1968,Alabama,"196,579","146,923","706,415",https://uselectionatlas.org/RESULTS/
+1968,Alaska,"35,411","37,600","10,024",https://uselectionatlas.org/RESULTS/
+1968,Arizona,"170,514","266,721","49,701",https://uselectionatlas.org/RESULTS/
+1968,Arkansas,"184,901","189,062","235,627",https://uselectionatlas.org/RESULTS/
+1968,California,"3,244,318","3,467,664","539,605",https://uselectionatlas.org/RESULTS/
+1968,Colorado,"335,174","409,345","66,680",https://uselectionatlas.org/RESULTS/
+1968,Connecticut,"621,561","556,721","77,950",https://uselectionatlas.org/RESULTS/
+1968,Delaware,"89,194","96,714","28,459",https://uselectionatlas.org/RESULTS/
+1968,District of Columbia,"139,566","31,012",0,https://uselectionatlas.org/RESULTS/
+1968,Florida,"676,794","886,804","624,207",https://uselectionatlas.org/RESULTS/
+1968,Georgia,"334,440","380,111","535,715",https://uselectionatlas.org/RESULTS/
+1968,Hawaii,"141,324","91,425","3,469",https://uselectionatlas.org/RESULTS/
+1968,Idaho,"89,273","165,369","36,541",https://uselectionatlas.org/RESULTS/
+1968,Illinois,"2,039,814","2,174,774","405,161",https://uselectionatlas.org/RESULTS/
+1968,Indiana,"806,659","1,067,885","249,053",https://uselectionatlas.org/RESULTS/
+1968,Iowa,"476,699","619,106","72,126",https://uselectionatlas.org/RESULTS/
+1968,Kansas,"302,996","478,674","91,113",https://uselectionatlas.org/RESULTS/
+1968,Kentucky,"397,541","462,411","195,941",https://uselectionatlas.org/RESULTS/
+1968,Louisiana,"309,615","257,535","530,300",https://uselectionatlas.org/RESULTS/
+1968,Maine,"217,312","169,254","6,370",https://uselectionatlas.org/RESULTS/
+1968,Maryland,"538,310","517,995","178,734",https://uselectionatlas.org/RESULTS/
+1968,Massachusetts,"1,469,218","766,844","95,690",https://uselectionatlas.org/RESULTS/
+1968,Michigan,"1,593,082","1,370,665","342,503",https://uselectionatlas.org/RESULTS/
+1968,Minnesota,"857,738","658,643","72,129",https://uselectionatlas.org/RESULTS/
+1968,Mississippi,"150,644","88,516","415,349",https://uselectionatlas.org/RESULTS/
+1968,Missouri,"791,444","811,932","206,126",https://uselectionatlas.org/RESULTS/
+1968,Montana,"114,117","138,835","21,452",https://uselectionatlas.org/RESULTS/
+1968,Nebraska,"170,784","321,163","44,904",https://uselectionatlas.org/RESULTS/
+1968,Nevada,"60,598","73,188","20,432",https://uselectionatlas.org/RESULTS/
+1968,New Hampshire,"130,589","154,903","11,807",https://uselectionatlas.org/RESULTS/
+1968,New Jersey,"1,264,206","1,325,467","285,722",https://uselectionatlas.org/RESULTS/
+1968,New Mexico,"130,081","169,692","27,508",https://uselectionatlas.org/RESULTS/
+1968,New York,"3,378,470","3,007,932","403,664",https://uselectionatlas.org/RESULTS/
+1968,North Carolina,"464,113","627,192","496,188",https://uselectionatlas.org/RESULTS/
+1968,North Dakota,"94,769","138,669","14,444",https://uselectionatlas.org/RESULTS/
+1968,Ohio,"1,700,586","1,791,014","468,098",https://uselectionatlas.org/RESULTS/
+1968,Oklahoma,"301,658","449,697","191,731",https://uselectionatlas.org/RESULTS/
+1968,Oregon,"358,866","408,433","52,323",https://uselectionatlas.org/RESULTS/
+1968,Pennsylvania,"2,259,405","2,090,017","398,506",https://uselectionatlas.org/RESULTS/
+1968,Rhode Island,"246,518","122,359","16,123",https://uselectionatlas.org/RESULTS/
+1968,South Carolina,"197,486","254,062","215,434",https://uselectionatlas.org/RESULTS/
+1968,South Dakota,"118,023","149,841","13,400",https://uselectionatlas.org/RESULTS/
+1968,Tennessee,"351,233","472,592","424,792",https://uselectionatlas.org/RESULTS/
+1968,Texas,"1,266,804","1,227,844","584,758",https://uselectionatlas.org/RESULTS/
+1968,Utah,"156,665","238,728","27,175",https://uselectionatlas.org/RESULTS/
+1968,Vermont,"70,255","85,142","6,007",https://uselectionatlas.org/RESULTS/
+1968,Virginia,"442,387","590,319","328,785",https://uselectionatlas.org/RESULTS/
+1968,Washington,"616,037","588,510","99,734",https://uselectionatlas.org/RESULTS/
+1968,West Virginia,"374,091","307,555","72,560",https://uselectionatlas.org/RESULTS/
+1968,Wisconsin,"748,804","809,997","132,737",https://uselectionatlas.org/RESULTS/
+1968,Wyoming,"45,173","70,927","11,105",https://uselectionatlas.org/RESULTS/
+1968,,"31,271,839","31,783,783","10,144,377",https://uselectionatlas.org/RESULTS/
+1972,Alabama,"256,923","728,701","20,469",https://uselectionatlas.org/RESULTS/
+1972,Alaska,"32,967","55,349","6,903",https://uselectionatlas.org/RESULTS/
+1972,Arizona,"198,540","402,812","52,153",https://uselectionatlas.org/RESULTS/
+1972,Arkansas,"198,899","445,751","3,016",https://uselectionatlas.org/RESULTS/
+1972,California,"3,475,847","4,602,096","289,919",https://uselectionatlas.org/RESULTS/
+1972,Colorado,"329,980","597,189","26,715",https://uselectionatlas.org/RESULTS/
+1972,Connecticut,"555,498","810,763","18,016",https://uselectionatlas.org/RESULTS/
+1972,Delaware,"92,283","140,357","2,876",https://uselectionatlas.org/RESULTS/
+1972,District of Columbia,"127,627","35,226",568,https://uselectionatlas.org/RESULTS/
+1972,Florida,"718,117","1,857,759","7,407",https://uselectionatlas.org/RESULTS/
+1972,Georgia,"289,529","881,496","3,747",https://uselectionatlas.org/RESULTS/
+1972,Hawaii,"101,409","168,865",0,https://uselectionatlas.org/RESULTS/
+1972,Idaho,"80,826","199,384","30,169",https://uselectionatlas.org/RESULTS/
+1972,Illinois,"1,913,472","2,788,179","21,585",https://uselectionatlas.org/RESULTS/
+1972,Indiana,"708,568","1,405,154","11,807",https://uselectionatlas.org/RESULTS/
+1972,Iowa,"496,206","706,207","23,531",https://uselectionatlas.org/RESULTS/
+1972,Kansas,"270,287","619,812","25,996",https://uselectionatlas.org/RESULTS/
+1972,Kentucky,"371,159","676,446","19,894",https://uselectionatlas.org/RESULTS/
+1972,Louisiana,"298,142","686,852","66,497",https://uselectionatlas.org/RESULTS/
+1972,Maine,"160,584","256,458",229,https://uselectionatlas.org/RESULTS/
+1972,Maine CD-1,"85,028","135,338",100,https://www.ourcampaigns.com/RaceDetail.html?RaceID=749915
+1972,Maine CD-2,"75,556","121,120",129,https://www.ourcampaigns.com/RaceDetail.html?RaceID=749916
+1972,Maryland,"505,781","829,305","18,726",https://uselectionatlas.org/RESULTS/
+1972,Massachusetts,"1,332,540","1,112,078","14,138",https://uselectionatlas.org/RESULTS/
+1972,Michigan,"1,459,435","1,961,721","69,169",https://uselectionatlas.org/RESULTS/
+1972,Minnesota,"802,346","898,269","41,037",https://uselectionatlas.org/RESULTS/
+1972,Mississippi,"126,782","505,125","14,056",https://uselectionatlas.org/RESULTS/
+1972,Missouri,"698,531","1,154,058",0,https://uselectionatlas.org/RESULTS/
+1972,Montana,"120,197","183,976","13,430",https://uselectionatlas.org/RESULTS/
+1972,Nebraska,"169,991","406,298",0,https://uselectionatlas.org/RESULTS/
+1972,Nevada,"66,016","115,750",0,https://uselectionatlas.org/RESULTS/
+1972,New Hampshire,"116,435","213,724","3,900",https://uselectionatlas.org/RESULTS/
+1972,New Jersey,"1,102,211","1,845,502","49,516",https://uselectionatlas.org/RESULTS/
+1972,New Mexico,"141,084","235,606","9,241",https://uselectionatlas.org/RESULTS/
+1972,New York,"2,951,084","4,192,778","17,968",https://uselectionatlas.org/RESULTS/
+1972,North Carolina,"438,705","1,054,889","25,018",https://uselectionatlas.org/RESULTS/
+1972,North Dakota,"100,384","174,109","6,021",https://uselectionatlas.org/RESULTS/
+1972,Ohio,"1,558,889","2,441,827","94,071",https://uselectionatlas.org/RESULTS/
+1972,Oklahoma,"247,147","759,025","23,728",https://uselectionatlas.org/RESULTS/
+1972,Oregon,"392,760","486,686","48,500",https://uselectionatlas.org/RESULTS/
+1972,Pennsylvania,"1,796,951","2,714,521","80,633",https://uselectionatlas.org/RESULTS/
+1972,Rhode Island,"194,645","220,383",780,https://uselectionatlas.org/RESULTS/
+1972,South Carolina,"189,270","478,427","10,183",https://uselectionatlas.org/RESULTS/
+1972,South Dakota,"139,945","166,476",994,https://uselectionatlas.org/RESULTS/
+1972,Tennessee,"357,293","813,147","30,742",https://uselectionatlas.org/RESULTS/
+1972,Texas,"1,154,291","2,298,896","19,527",https://uselectionatlas.org/RESULTS/
+1972,Utah,"126,284","323,643","28,549",https://uselectionatlas.org/RESULTS/
+1972,Vermont,"68,174","117,149","1,623",https://uselectionatlas.org/RESULTS/
+1972,Virginia,"438,887","988,493","29,639",https://uselectionatlas.org/RESULTS/
+1972,Washington,"568,334","837,135","65,378",https://uselectionatlas.org/RESULTS/
+1972,West Virginia,"277,435","484,964",0,https://uselectionatlas.org/RESULTS/
+1972,Wisconsin,"810,174","989,430","53,286",https://uselectionatlas.org/RESULTS/
+1972,Wyoming,"44,358","100,464",748,https://uselectionatlas.org/RESULTS/
+1972,,"29,173,222","47,168,710","1,402,098",https://uselectionatlas.org/RESULTS/
+1976,Alabama,"659,170","504,070","19,610",https://uselectionatlas.org/RESULTS/
+1976,Alaska,"44,058","71,555","7,961",https://uselectionatlas.org/RESULTS/
+1976,Arizona,"295,602","418,642","28,475",https://uselectionatlas.org/RESULTS/
+1976,Arkansas,"499,614","268,753","1,029",https://uselectionatlas.org/RESULTS/
+1976,California,"3,742,284","3,882,244","242,589",https://uselectionatlas.org/RESULTS/
+1976,Colorado,"460,353","584,367","36,415",https://uselectionatlas.org/RESULTS/
+1976,Connecticut,"647,895","719,261","14,370",https://uselectionatlas.org/RESULTS/
+1976,Delaware,"122,596","109,831","3,407",https://uselectionatlas.org/RESULTS/
+1976,District of Columbia,"137,818","27,873","3,139",https://uselectionatlas.org/RESULTS/
+1976,Florida,"1,636,000","1,469,531","45,100",https://uselectionatlas.org/RESULTS/
+1976,Georgia,"979,409","483,743","4,306",https://uselectionatlas.org/RESULTS/
+1976,Hawaii,"147,375","140,003","3,923",https://uselectionatlas.org/RESULTS/
+1976,Idaho,"126,549","204,151","10,232",https://uselectionatlas.org/RESULTS/
+1976,Illinois,"2,271,295","2,364,269","83,269",https://uselectionatlas.org/RESULTS/
+1976,Indiana,"1,014,714","1,183,958","21,690",https://uselectionatlas.org/RESULTS/
+1976,Iowa,"619,931","632,863","26,512",https://uselectionatlas.org/RESULTS/
+1976,Kansas,"430,421","502,752","24,672",https://uselectionatlas.org/RESULTS/
+1976,Kentucky,"615,717","531,852","19,573",https://uselectionatlas.org/RESULTS/
+1976,Louisiana,"661,365","587,446","29,628",https://uselectionatlas.org/RESULTS/
+1976,Maine,"232,279","236,320","14,609",https://uselectionatlas.org/RESULTS/
+1976,Maine CD-1,"123,598","127,019","7,424",https://www.ourcampaigns.com/RaceDetail.html?RaceID=924045
+1976,Maine CD-2,"108,681","109,301","7,185",https://www.ourcampaigns.com/RaceDetail.html?RaceID=924046
+1976,Maryland,"759,612","672,661",0,https://uselectionatlas.org/RESULTS/
+1976,Massachusetts,"1,429,475","1,030,276","87,807",https://uselectionatlas.org/RESULTS/
+1976,Michigan,"1,696,714","1,893,742","63,293",https://uselectionatlas.org/RESULTS/
+1976,Minnesota,"1,070,440","819,395","60,096",https://uselectionatlas.org/RESULTS/
+1976,Mississippi,"381,309","366,846","21,205",https://uselectionatlas.org/RESULTS/
+1976,Missouri,"998,387","927,443","27,770",https://uselectionatlas.org/RESULTS/
+1976,Montana,"149,259","173,703","5,772",https://uselectionatlas.org/RESULTS/
+1976,Nebraska,"233,692","359,705","14,271",https://uselectionatlas.org/RESULTS/
+1976,Nevada,"92,479","101,273","8,124",https://uselectionatlas.org/RESULTS/
+1976,New Hampshire,"147,635","185,935","6,048",https://uselectionatlas.org/RESULTS/
+1976,New Jersey,"1,444,653","1,509,688","60,131",https://uselectionatlas.org/RESULTS/
+1976,New Mexico,"201,148","211,419","4,023",https://uselectionatlas.org/RESULTS/
+1976,New York,"3,389,558","3,100,791","44,071",https://uselectionatlas.org/RESULTS/
+1976,North Carolina,"927,365","741,960","8,581",https://uselectionatlas.org/RESULTS/
+1976,North Dakota,"136,078","153,470","7,546",https://uselectionatlas.org/RESULTS/
+1976,Ohio,"2,011,621","2,000,505","99,747",https://uselectionatlas.org/RESULTS/
+1976,Oklahoma,"532,442","545,708","14,101",https://uselectionatlas.org/RESULTS/
+1976,Oregon,"490,407","492,120","47,349",https://uselectionatlas.org/RESULTS/
+1976,Pennsylvania,"2,328,677","2,205,604","86,506",https://uselectionatlas.org/RESULTS/
+1976,Rhode Island,"227,636","181,249","2,285",https://uselectionatlas.org/RESULTS/
+1976,South Carolina,"450,825","346,140","5,629",https://uselectionatlas.org/RESULTS/
+1976,South Dakota,"147,068","151,505","2,105",https://uselectionatlas.org/RESULTS/
+1976,Tennessee,"825,879","633,969","16,498",https://uselectionatlas.org/RESULTS/
+1976,Texas,"2,082,319","1,953,300","36,265",https://uselectionatlas.org/RESULTS/
+1976,Utah,"182,110","337,908","21,180",https://uselectionatlas.org/RESULTS/
+1976,Vermont,"81,044","102,085","4,726",https://uselectionatlas.org/RESULTS/
+1976,Virginia,"813,896","836,554","46,644",https://uselectionatlas.org/RESULTS/
+1976,Washington,"717,323","777,732","60,479",https://uselectionatlas.org/RESULTS/
+1976,West Virginia,"435,914","314,760",0,https://uselectionatlas.org/RESULTS/
+1976,Wisconsin,"1,040,232","1,004,987","56,117",https://uselectionatlas.org/RESULTS/
+1976,Wyoming,"62,239","92,717","1,387",https://uselectionatlas.org/RESULTS/
+1976,,"40,831,881","39,148,634","1,560,265",https://uselectionatlas.org/RESULTS/
+1980,Alabama,"636,730","654,192","51,007",https://uselectionatlas.org/RESULTS/
+1980,Alaska,"41,842","86,112","30,491",https://uselectionatlas.org/RESULTS/
+1980,Arizona,"246,843","529,688","97,414",https://uselectionatlas.org/RESULTS/
+1980,Arkansas,"398,041","403,164","36,377",https://uselectionatlas.org/RESULTS/
+1980,California,"3,083,661","4,524,858","978,544",https://uselectionatlas.org/RESULTS/
+1980,Colorado,"367,973","652,264","164,178",https://uselectionatlas.org/RESULTS/
+1980,Connecticut,"541,732","677,210","187,343",https://uselectionatlas.org/RESULTS/
+1980,Delaware,"105,754","111,252","18,662",https://uselectionatlas.org/RESULTS/
+1980,District of Columbia,"130,231","23,313","20,345",https://uselectionatlas.org/RESULTS/
+1980,Florida,"1,419,475","2,046,951","220,600",https://uselectionatlas.org/RESULTS/
+1980,Georgia,"890,733","654,168","52,566",https://uselectionatlas.org/RESULTS/
+1980,Hawaii,"135,879","130,112","37,296",https://uselectionatlas.org/RESULTS/
+1980,Idaho,"110,192","290,699","36,540",https://uselectionatlas.org/RESULTS/
+1980,Illinois,"1,981,413","2,358,049","410,259",https://uselectionatlas.org/RESULTS/
+1980,Indiana,"844,197","1,255,656","142,180",https://uselectionatlas.org/RESULTS/
+1980,Iowa,"508,672","676,026","132,963",https://uselectionatlas.org/RESULTS/
+1980,Kansas,"326,150","566,812","86,833",https://uselectionatlas.org/RESULTS/
+1980,Kentucky,"616,417","635,274","42,936",https://uselectionatlas.org/RESULTS/
+1980,Louisiana,"708,453","792,853","47,285",https://uselectionatlas.org/RESULTS/
+1980,Maine,"220,974","238,522","63,515",https://uselectionatlas.org/RESULTS/
+1980,Maine CD-1,"117,613","126,274","36,613",https://www.ourcampaigns.com/RaceDetail.html?RaceID=924047
+1980,Maine CD-2,"103,361","112,648","26,902",https://www.ourcampaigns.com/RaceDetail.html?RaceID=924048
+1980,Maryland,"726,161","680,606","133,729",https://uselectionatlas.org/RESULTS/
+1980,Massachusetts,"1,053,802","1,057,631","412,865",https://uselectionatlas.org/RESULTS/
+1980,Michigan,"1,661,532","1,915,225","332,968",https://uselectionatlas.org/RESULTS/
+1980,Minnesota,"954,174","873,241","224,538",https://uselectionatlas.org/RESULTS/
+1980,Mississippi,"429,281","441,089","22,250",https://uselectionatlas.org/RESULTS/
+1980,Missouri,"931,182","1,074,181","94,461",https://uselectionatlas.org/RESULTS/
+1980,Montana,"118,032","206,814","39,106",https://uselectionatlas.org/RESULTS/
+1980,Nebraska,"166,851","419,937","54,066",https://uselectionatlas.org/RESULTS/
+1980,Nevada,"66,666","155,017","26,202",https://uselectionatlas.org/RESULTS/
+1980,New Hampshire,"108,864","221,705","53,430",https://uselectionatlas.org/RESULTS/
+1980,New Jersey,"1,147,364","1,546,557","281,763",https://uselectionatlas.org/RESULTS/
+1980,New Mexico,"167,826","250,779","37,632",https://uselectionatlas.org/RESULTS/
+1980,New York,"2,728,372","2,893,831","579,756",https://uselectionatlas.org/RESULTS/
+1980,North Carolina,"875,635","915,018","65,180",https://uselectionatlas.org/RESULTS/
+1980,North Dakota,"79,189","193,695","28,661",https://uselectionatlas.org/RESULTS/
+1980,Ohio,"1,752,414","2,206,545","324,644",https://uselectionatlas.org/RESULTS/
+1980,Oklahoma,"402,026","695,570","52,112",https://uselectionatlas.org/RESULTS/
+1980,Oregon,"456,890","571,044","153,582",https://uselectionatlas.org/RESULTS/
+1980,Pennsylvania,"1,937,540","2,261,872","362,089",https://uselectionatlas.org/RESULTS/
+1980,Rhode Island,"198,342","154,793","62,937",https://uselectionatlas.org/RESULTS/
+1980,South Carolina,"427,560","441,207","21,316",https://uselectionatlas.org/RESULTS/
+1980,South Dakota,"103,855","198,343","25,505",https://uselectionatlas.org/RESULTS/
+1980,Tennessee,"783,051","787,761","46,804",https://uselectionatlas.org/RESULTS/
+1980,Texas,"1,881,147","2,510,705","149,785",https://uselectionatlas.org/RESULTS/
+1980,Utah,"124,266","439,687","40,269",https://uselectionatlas.org/RESULTS/
+1980,Vermont,"81,891","94,598","36,718",https://uselectionatlas.org/RESULTS/
+1980,Virginia,"752,174","989,609","124,249",https://uselectionatlas.org/RESULTS/
+1980,Washington,"650,193","865,244","226,957",https://uselectionatlas.org/RESULTS/
+1980,West Virginia,"367,462","334,206","36,047",https://uselectionatlas.org/RESULTS/
+1980,Wisconsin,"981,584","1,088,845","202,792",https://uselectionatlas.org/RESULTS/
+1980,Wyoming,"49,427","110,700","16,586",https://uselectionatlas.org/RESULTS/
+1980,,"35,480,115","43,903,230","7,126,333",https://uselectionatlas.org/RESULTS/
+1984,Alabama,"551,899","872,849","16,965",https://uselectionatlas.org/RESULTS/
+1984,Alaska,"62,007","138,377","7,221",https://uselectionatlas.org/RESULTS/
+1984,Arizona,"333,854","681,416","10,627",https://uselectionatlas.org/RESULTS/
+1984,Arkansas,"338,646","534,774","10,986",https://uselectionatlas.org/RESULTS/
+1984,California,"3,922,519","5,467,009","115,895",https://uselectionatlas.org/RESULTS/
+1984,Colorado,"454,974","821,818","18,589",https://uselectionatlas.org/RESULTS/
+1984,Connecticut,"569,597","890,877","6,426",https://uselectionatlas.org/RESULTS/
+1984,Delaware,"101,656","152,190",726,https://uselectionatlas.org/RESULTS/
+1984,District of Columbia,"180,408","29,009","1,871",https://uselectionatlas.org/RESULTS/
+1984,Florida,"1,448,816","2,730,350",885,https://uselectionatlas.org/RESULTS/
+1984,Georgia,"706,628","1,068,722",743,https://uselectionatlas.org/RESULTS/
+1984,Hawaii,"147,154","185,050","3,642",https://uselectionatlas.org/RESULTS/
+1984,Idaho,"108,510","297,523","5,111",https://uselectionatlas.org/RESULTS/
+1984,Illinois,"2,086,499","2,707,103","25,486",https://uselectionatlas.org/RESULTS/
+1984,Indiana,"841,481","1,377,230","14,358",https://uselectionatlas.org/RESULTS/
+1984,Iowa,"605,620","703,088","11,097",https://uselectionatlas.org/RESULTS/
+1984,Kansas,"333,149","677,296","11,546",https://uselectionatlas.org/RESULTS/
+1984,Kentucky,"539,589","822,782","8,090",https://uselectionatlas.org/RESULTS/
+1984,Louisiana,"651,586","1,037,299","17,937",https://uselectionatlas.org/RESULTS/
+1984,Maine,"214,515","336,500","2,129",https://uselectionatlas.org/RESULTS/
+1984,Maine CD-1,"117,450","175,472","1,057",https://www.ourcampaigns.com/RaceDetail.html?RaceID=924049
+1984,Maine CD-2,"97,065","161,028","1,072",https://www.ourcampaigns.com/RaceDetail.html?RaceID=924050
+1984,Maryland,"787,935","879,918","8,020",https://uselectionatlas.org/RESULTS/
+1984,Massachusetts,"1,239,606","1,310,936","8,911",https://uselectionatlas.org/RESULTS/
+1984,Michigan,"1,529,638","2,251,571","20,449",https://uselectionatlas.org/RESULTS/
+1984,Minnesota,"1,036,364","1,032,603","15,482",https://uselectionatlas.org/RESULTS/
+1984,Mississippi,"352,192","581,477","6,523",https://uselectionatlas.org/RESULTS/
+1984,Missouri,"848,583","1,274,188",0,https://uselectionatlas.org/RESULTS/
+1984,Montana,"146,742","232,450","5,185",https://uselectionatlas.org/RESULTS/
+1984,Nebraska,"187,866","460,054","4,170",https://uselectionatlas.org/RESULTS/
+1984,Nevada,"91,655","188,770","6,242",https://uselectionatlas.org/RESULTS/
+1984,New Hampshire,"120,395","267,051","1,508",https://uselectionatlas.org/RESULTS/
+1984,New Jersey,"1,261,323","1,933,630","22,909",https://uselectionatlas.org/RESULTS/
+1984,New Mexico,"201,769","307,101","5,500",https://uselectionatlas.org/RESULTS/
+1984,New York,"3,119,609","3,664,763","22,438",https://uselectionatlas.org/RESULTS/
+1984,North Carolina,"824,287","1,346,481","4,593",https://uselectionatlas.org/RESULTS/
+1984,North Dakota,"104,429","200,336","4,206",https://uselectionatlas.org/RESULTS/
+1984,Ohio,"1,825,440","2,678,560","43,619",https://uselectionatlas.org/RESULTS/
+1984,Oklahoma,"385,080","861,530","9,066",https://uselectionatlas.org/RESULTS/
+1984,Oregon,"536,479","685,700","4,348",https://uselectionatlas.org/RESULTS/
+1984,Pennsylvania,"2,228,131","2,584,323","32,449",https://uselectionatlas.org/RESULTS/
+1984,Rhode Island,"197,106","212,080","1,306",https://uselectionatlas.org/RESULTS/
+1984,South Carolina,"344,470","615,539","8,531",https://uselectionatlas.org/RESULTS/
+1984,South Dakota,"116,113","200,267","1,487",https://uselectionatlas.org/RESULTS/
+1984,Tennessee,"711,714","990,212","10,067",https://uselectionatlas.org/RESULTS/
+1984,Texas,"1,949,276","3,433,428","14,867",https://uselectionatlas.org/RESULTS/
+1984,Utah,"155,369","469,105","5,182",https://uselectionatlas.org/RESULTS/
+1984,Vermont,"95,730","135,865","2,966",https://uselectionatlas.org/RESULTS/
+1984,Virginia,"796,250","1,337,078","13,307",https://uselectionatlas.org/RESULTS/
+1984,Washington,"807,352","1,051,670","24,888",https://uselectionatlas.org/RESULTS/
+1984,West Virginia,"328,125","405,483","2,134",https://uselectionatlas.org/RESULTS/
+1984,Wisconsin,"995,847","1,198,800","17,369",https://uselectionatlas.org/RESULTS/
+1984,Wyoming,"53,370","133,241","2,357",https://uselectionatlas.org/RESULTS/
+1984,,"37,577,352","54,455,472","620,409",https://uselectionatlas.org/RESULTS/
+1988,Alabama,"549,506","815,576","13,394",https://uselectionatlas.org/RESULTS/
+1988,Alaska,"72,584","119,251","8,281",https://uselectionatlas.org/RESULTS/
+1988,Arizona,"454,029","702,541","15,303",https://uselectionatlas.org/RESULTS/
+1988,Arkansas,"349,237","466,578","11,923",https://uselectionatlas.org/RESULTS/
+1988,California,"4,702,233","5,054,917","129,914",https://uselectionatlas.org/RESULTS/
+1988,Colorado,"621,453","728,177","22,764",https://uselectionatlas.org/RESULTS/
+1988,Connecticut,"676,584","750,241","16,569",https://uselectionatlas.org/RESULTS/
+1988,Delaware,"108,647","139,639","1,605",https://uselectionatlas.org/RESULTS/
+1988,District of Columbia,"159,407","27,590","5,880",https://uselectionatlas.org/RESULTS/
+1988,Florida,"1,656,701","2,618,885","26,727",https://uselectionatlas.org/RESULTS/
+1988,Georgia,"714,792","1,081,331","13,549",https://uselectionatlas.org/RESULTS/
+1988,Hawaii,"192,364","158,625","3,472",https://uselectionatlas.org/RESULTS/
+1988,Idaho,"147,272","253,881","7,815",https://uselectionatlas.org/RESULTS/
+1988,Illinois,"2,215,940","2,310,939","32,241",https://uselectionatlas.org/RESULTS/
+1988,Indiana,"860,643","1,297,763","10,215",https://uselectionatlas.org/RESULTS/
+1988,Iowa,"670,557","545,355","9,702",https://uselectionatlas.org/RESULTS/
+1988,Kansas,"422,636","554,049","16,359",https://uselectionatlas.org/RESULTS/
+1988,Kentucky,"580,368","734,281","7,868",https://uselectionatlas.org/RESULTS/
+1988,Louisiana,"717,460","883,702","27,040",https://uselectionatlas.org/RESULTS/
+1988,Maine,"243,569","307,131","4,335",https://uselectionatlas.org/RESULTS/
+1988,Maine CD-1,"131,078","169,292","2,392",https://www.ourcampaigns.com/RaceDetail.html?RaceID=489903
+1988,Maine CD-2,"112,491","137,839","1,943",https://www.ourcampaigns.com/RaceDetail.html?RaceID=487876
+1988,Maryland,"826,304","876,167","11,887",https://uselectionatlas.org/RESULTS/
+1988,Massachusetts,"1,401,406","1,194,644","36,755",https://uselectionatlas.org/RESULTS/
+1988,Michigan,"1,675,783","1,965,486","27,894",https://uselectionatlas.org/RESULTS/
+1988,Minnesota,"1,109,471","962,337","24,982",https://uselectionatlas.org/RESULTS/
+1988,Mississippi,"363,921","557,890","9,716",https://uselectionatlas.org/RESULTS/
+1988,Missouri,"1,001,619","1,084,953","6,656",https://uselectionatlas.org/RESULTS/
+1988,Montana,"168,936","190,412","6,326",https://uselectionatlas.org/RESULTS/
+1988,Nebraska,"259,646","398,447","4,279",https://uselectionatlas.org/RESULTS/
+1988,Nevada,"132,738","206,040","11,289",https://uselectionatlas.org/RESULTS/
+1988,New Hampshire,"163,696","281,537","5,292",https://uselectionatlas.org/RESULTS/
+1988,New Jersey,"1,320,352","1,743,192","36,009",https://uselectionatlas.org/RESULTS/
+1988,New Mexico,"244,497","270,341","6,449",https://uselectionatlas.org/RESULTS/
+1988,New York,"3,347,882","3,081,871","55,930",https://uselectionatlas.org/RESULTS/
+1988,North Carolina,"890,167","1,237,258","6,945",https://uselectionatlas.org/RESULTS/
+1988,North Dakota,"127,739","166,559","2,963",https://uselectionatlas.org/RESULTS/
+1988,Ohio,"1,939,629","2,416,549","37,521",https://uselectionatlas.org/RESULTS/
+1988,Oklahoma,"483,423","678,367","9,246",https://uselectionatlas.org/RESULTS/
+1988,Oregon,"616,206","560,126","25,362",https://uselectionatlas.org/RESULTS/
+1988,Pennsylvania,"2,194,944","2,300,087","41,220",https://uselectionatlas.org/RESULTS/
+1988,Rhode Island,"225,123","177,761","1,736",https://uselectionatlas.org/RESULTS/
+1988,South Carolina,"370,554","606,443","9,012",https://uselectionatlas.org/RESULTS/
+1988,South Dakota,"145,560","165,415","2,016",https://uselectionatlas.org/RESULTS/
+1988,Tennessee,"679,794","947,233","9,223",https://uselectionatlas.org/RESULTS/
+1988,Texas,"2,352,748","3,036,829","37,833",https://uselectionatlas.org/RESULTS/
+1988,Utah,"207,343","428,442","11,223",https://uselectionatlas.org/RESULTS/
+1988,Vermont,"115,775","124,331","3,227",https://uselectionatlas.org/RESULTS/
+1988,Virginia,"859,799","1,309,162","22,648",https://uselectionatlas.org/RESULTS/
+1988,Washington,"933,516","903,835","27,902",https://uselectionatlas.org/RESULTS/
+1988,West Virginia,"341,016","310,065","2,230",https://uselectionatlas.org/RESULTS/
+1988,Wisconsin,"1,126,794","1,047,499","17,315",https://uselectionatlas.org/RESULTS/
+1988,Wyoming,"67,113","106,867","2,571",https://uselectionatlas.org/RESULTS/
+1988,,"41,809,485","48,886,588","898,613",https://uselectionatlas.org/RESULTS/
+1992,Alabama,"690,080","804,283","193,697",https://uselectionatlas.org/RESULTS/
+1992,Alaska,"78,294","102,000","78,212",https://uselectionatlas.org/RESULTS/
+1992,Arizona,"543,050","572,086","371,870",https://uselectionatlas.org/RESULTS/
+1992,Arkansas,"505,823","337,324","107,506",https://uselectionatlas.org/RESULTS/
+1992,California,"5,121,325","3,630,574","2,379,822",https://uselectionatlas.org/RESULTS/
+1992,Colorado,"629,681","562,850","376,649",https://uselectionatlas.org/RESULTS/
+1992,Connecticut,"682,318","578,313","355,701",https://uselectionatlas.org/RESULTS/
+1992,Delaware,"126,054","102,313","61,368",https://uselectionatlas.org/RESULTS/
+1992,District of Columbia,"192,619","20,698","14,255",https://uselectionatlas.org/RESULTS/
+1992,Florida,"2,072,698","2,173,310","1,068,384",https://uselectionatlas.org/RESULTS/
+1992,Georgia,"1,008,966","995,252","316,915",https://uselectionatlas.org/RESULTS/
+1992,Hawaii,"179,310","136,822","56,710",https://uselectionatlas.org/RESULTS/
+1992,Idaho,"137,013","202,645","142,484",https://uselectionatlas.org/RESULTS/
+1992,Illinois,"2,453,350","1,734,096","862,711",https://uselectionatlas.org/RESULTS/
+1992,Indiana,"848,420","989,375","468,076",https://uselectionatlas.org/RESULTS/
+1992,Iowa,"586,353","504,891","263,363",https://uselectionatlas.org/RESULTS/
+1992,Kansas,"390,434","449,951","316,851",https://uselectionatlas.org/RESULTS/
+1992,Kentucky,"665,104","617,178","210,618",https://uselectionatlas.org/RESULTS/
+1992,Louisiana,"815,971","733,386","240,660",https://uselectionatlas.org/RESULTS/
+1992,Maine,"263,420","206,504","209,575",https://uselectionatlas.org/RESULTS/
+1992,Maine CD-1,"145,191","115,697","104,312",https://www.ourcampaigns.com/RaceDetail.html?RaceID=924042
+1992,Maine CD-2,"118,229","90,807","105,263",https://www.ourcampaigns.com/RaceDetail.html?RaceID=924043
+1992,Maryland,"988,571","707,094","289,381",https://uselectionatlas.org/RESULTS/
+1992,Massachusetts,"1,318,662","805,049","649,863",https://uselectionatlas.org/RESULTS/
+1992,Michigan,"1,871,182","1,554,940","848,551",https://uselectionatlas.org/RESULTS/
+1992,Minnesota,"1,020,997","747,841","579,110",https://uselectionatlas.org/RESULTS/
+1992,Mississippi,"400,258","487,793","93,742",https://uselectionatlas.org/RESULTS/
+1992,Missouri,"1,053,873","811,159","526,533",https://uselectionatlas.org/RESULTS/
+1992,Montana,"154,507","144,207","111,897",https://uselectionatlas.org/RESULTS/
+1992,Nebraska,"217,344","344,346","177,593",https://uselectionatlas.org/RESULTS/
+1992,Nebraska CD-1,"80,938","107,360","61,227",https://uselectionatlas.org/RESULTS/data.php?year=1992&fips=31&f=0&off=0&elect=0&datatype=cd&def=1
+1992,Nebraska CD-2,"78,816","115,380","49,686",https://uselectionatlas.org/RESULTS/data.php?year=1992&fips=31&f=0&off=0&elect=0&datatype=cd&def=1
+1992,Nebraska CD-3,"57,590","121,606","66,675",https://uselectionatlas.org/RESULTS/data.php?year=1992&fips=31&f=0&off=0&elect=0&datatype=cd&def=1
+1992,Nevada,"189,148","175,828","141,342",https://uselectionatlas.org/RESULTS/
+1992,New Hampshire,"209,040","202,484","126,421",https://uselectionatlas.org/RESULTS/
+1992,New Jersey,"1,436,206","1,356,865","550,523",https://uselectionatlas.org/RESULTS/
+1992,New Mexico,"261,617","212,824","95,545",https://uselectionatlas.org/RESULTS/
+1992,New York,"3,444,450","2,346,649","1,135,826",https://uselectionatlas.org/RESULTS/
+1992,North Carolina,"1,114,042","1,134,661","363,147",https://uselectionatlas.org/RESULTS/
+1992,North Dakota,"99,168","136,244","72,721",https://uselectionatlas.org/RESULTS/
+1992,Ohio,"1,984,942","1,894,310","1,060,712",https://uselectionatlas.org/RESULTS/
+1992,Oklahoma,"473,066","592,929","324,364",https://uselectionatlas.org/RESULTS/
+1992,Oregon,"621,314","475,757","365,572",https://uselectionatlas.org/RESULTS/
+1992,Pennsylvania,"2,239,164","1,791,841","928,805",https://uselectionatlas.org/RESULTS/
+1992,Rhode Island,"213,299","131,601","108,578",https://uselectionatlas.org/RESULTS/
+1992,South Carolina,"479,514","577,507","145,506",https://uselectionatlas.org/RESULTS/
+1992,South Dakota,"124,888","136,718","74,648",https://uselectionatlas.org/RESULTS/
+1992,Tennessee,"933,521","841,300","207,817",https://uselectionatlas.org/RESULTS/
+1992,Texas,"2,281,815","2,496,071","1,376,132",https://uselectionatlas.org/RESULTS/
+1992,Utah,"183,429","322,632","238,008",https://uselectionatlas.org/RESULTS/
+1992,Vermont,"133,592","88,122","67,987",https://uselectionatlas.org/RESULTS/
+1992,Virginia,"1,038,650","1,150,517","369,498",https://uselectionatlas.org/RESULTS/
+1992,Washington,"993,037","731,234","563,959",https://uselectionatlas.org/RESULTS/
+1992,West Virginia,"331,001","241,974","110,736",https://uselectionatlas.org/RESULTS/
+1992,Wisconsin,"1,041,066","930,855","559,193",https://uselectionatlas.org/RESULTS/
+1992,Wyoming,"68,160","79,347","53,118",https://uselectionatlas.org/RESULTS/
+1992,,"44,909,806","39,104,550","20,412,255",https://uselectionatlas.org/RESULTS/
+1996,Alabama,"662,165","769,044","103,140",https://uselectionatlas.org/RESULTS/
+1996,Alaska,"80,380","122,746","38,494",https://uselectionatlas.org/RESULTS/
+1996,Arizona,"653,288","622,073","129,044",https://uselectionatlas.org/RESULTS/
+1996,Arkansas,"475,171","325,416","83,675",https://uselectionatlas.org/RESULTS/
+1996,California,"5,119,835","3,828,380","1,071,269",https://uselectionatlas.org/RESULTS/
+1996,Colorado,"671,152","691,848","147,704",https://uselectionatlas.org/RESULTS/
+1996,Connecticut,"735,740","483,109","173,765",https://uselectionatlas.org/RESULTS/
+1996,Delaware,"140,355","99,062","31,667",https://uselectionatlas.org/RESULTS/
+1996,District of Columbia,"158,220","17,339","10,167",https://uselectionatlas.org/RESULTS/
+1996,Florida,"2,546,870","2,244,536","512,388",https://uselectionatlas.org/RESULTS/
+1996,Georgia,"1,053,849","1,080,843","164,379",https://uselectionatlas.org/RESULTS/
+1996,Hawaii,"205,012","113,943","41,165",https://uselectionatlas.org/RESULTS/
+1996,Idaho,"165,443","256,595","69,681",https://uselectionatlas.org/RESULTS/
+1996,Illinois,"2,341,744","1,587,021","382,626",https://uselectionatlas.org/RESULTS/
+1996,Indiana,"887,424","1,006,693","241,725",https://uselectionatlas.org/RESULTS/
+1996,Iowa,"620,258","492,644","121,173",https://uselectionatlas.org/RESULTS/
+1996,Kansas,"387,659","583,245","103,396",https://uselectionatlas.org/RESULTS/
+1996,Kentucky,"636,614","623,283","128,811",https://uselectionatlas.org/RESULTS/
+1996,Louisiana,"927,837","712,586","143,536",https://uselectionatlas.org/RESULTS/
+1996,Maine,"312,788","186,378","106,731",https://uselectionatlas.org/RESULTS/
+1996,Maine CD-1,"165,053","100,851","51,217",https://www.ourcampaigns.com/RaceDetail.html?RaceID=924045
+1996,Maine CD-2,"147,735","85,527","55,514",https://www.ourcampaigns.com/RaceDetail.html?RaceID=924053
+1996,Maryland,"966,207","681,530","133,133",https://uselectionatlas.org/RESULTS/
+1996,Massachusetts,"1,571,763","718,107","266,915",https://uselectionatlas.org/RESULTS/
+1996,Michigan,"1,989,653","1,481,212","377,979",https://uselectionatlas.org/RESULTS/
+1996,Minnesota,"1,120,438","766,476","305,726",https://uselectionatlas.org/RESULTS/
+1996,Mississippi,"394,022","439,838","59,997",https://uselectionatlas.org/RESULTS/
+1996,Missouri,"1,025,935","890,016","242,114",https://uselectionatlas.org/RESULTS/
+1996,Montana,"167,922","179,652","59,687",https://uselectionatlas.org/RESULTS/
+1996,Nebraska,"236,761","363,467","77,187",https://uselectionatlas.org/RESULTS/
+1996,Nebraska CD-1,"87,712","114,563","28,055",https://uselectionatlas.org/RESULTS/data.php?year=1996&fips=31&f=0&off=0&elect=0&datatype=cd&def=1
+1996,Nebraska CD-2,"84,667","116,889","21,100",https://uselectionatlas.org/RESULTS/data.php?year=1996&fips=31&f=0&off=0&elect=0&datatype=cd&def=1
+1996,Nebraska CD-3,"64,382","132,015","28,028",https://uselectionatlas.org/RESULTS/data.php?year=1996&fips=31&f=0&off=0&elect=0&datatype=cd&def=1
+1996,Nevada,"203,974","199,244","61,061",https://uselectionatlas.org/RESULTS/
+1996,New Hampshire,"246,214","196,532","56,429",https://uselectionatlas.org/RESULTS/
+1996,New Jersey,"1,652,329","1,103,078","320,400",https://uselectionatlas.org/RESULTS/
+1996,New Mexico,"273,495","232,751","49,828",https://uselectionatlas.org/RESULTS/
+1996,New York,"3,756,177","1,933,492","626,460",https://uselectionatlas.org/RESULTS/
+1996,North Carolina,"1,107,849","1,225,938","182,020",https://uselectionatlas.org/RESULTS/
+1996,North Dakota,"106,905","125,050","34,456",https://uselectionatlas.org/RESULTS/
+1996,Ohio,"2,148,222","1,859,883","526,329",https://uselectionatlas.org/RESULTS/
+1996,Oklahoma,"488,105","582,315","136,293",https://uselectionatlas.org/RESULTS/
+1996,Oregon,"649,641","538,152","189,967",https://uselectionatlas.org/RESULTS/
+1996,Pennsylvania,"2,215,819","1,801,169","489,130",https://uselectionatlas.org/RESULTS/
+1996,Rhode Island,"233,050","104,683","52,551",https://uselectionatlas.org/RESULTS/
+1996,South Carolina,"504,051","573,458","71,948",https://uselectionatlas.org/RESULTS/
+1996,South Dakota,"139,333","150,543","33,950",https://uselectionatlas.org/RESULTS/
+1996,Tennessee,"909,146","863,530","121,429",https://uselectionatlas.org/RESULTS/
+1996,Texas,"2,459,683","2,736,167","415,794",https://uselectionatlas.org/RESULTS/
+1996,Utah,"221,633","361,911","82,085",https://uselectionatlas.org/RESULTS/
+1996,Vermont,"137,894","80,352","40,203",https://uselectionatlas.org/RESULTS/
+1996,Virginia,"1,091,060","1,138,350","187,232",https://uselectionatlas.org/RESULTS/
+1996,Washington,"1,123,323","840,712","289,802",https://uselectionatlas.org/RESULTS/
+1996,West Virginia,"327,812","233,946","74,701",https://uselectionatlas.org/RESULTS/
+1996,Wisconsin,"1,071,971","845,029","279,169",https://uselectionatlas.org/RESULTS/
+1996,Wyoming,"77,934","105,388","28,249",https://uselectionatlas.org/RESULTS/
+1996,,"47,400,125","39,198,755","9,676,760",https://uselectionatlas.org/RESULTS/
+2000,Alabama,"695,602","944,409","32,488",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Alaska,"79,004","167,398","39,158",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Arizona,"685,341","781,652","65,023",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Arkansas,"422,768","472,940","26,073",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,California,"5,861,203","4,567,429","537,224",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Colorado,"738,227","883,745","119,393",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Connecticut,"816,015","561,094","82,416",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Delaware,"180,068","137,288","10,266",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,District of Columbia,"171,923","18,073","11,898",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Florida,"2,912,253","2,912,790","138,067",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Georgia,"1,116,230","1,419,720","60,854",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Hawaii,"205,286","137,845","24,820",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Idaho,"138,637","336,937","26,047",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Illinois,"2,589,026","2,019,421","133,676",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Indiana,"901,980","1,245,836","51,486",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Iowa,"638,517","634,373","42,673",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Kansas,"399,276","622,332","50,610",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Kentucky,"638,898","872,492","32,797",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Louisiana,"792,344","927,871","45,441",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Maine,"319,951","286,616","45,250",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Maine CD-1,"176,293","148,618","24,040",https://web.archive.org/web/20120906013952/http://www.maine.gov/sos/cec/elec/2000g/gen00p-c.htm
+2000,Maine CD-2,"143,658","137,998","21,210",https://web.archive.org/web/20120906013952/http://www.maine.gov/sos/cec/elec/2000g/gen00p-c.htm
+2000,Maryland,"1,145,782","813,797","65,901",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Massachusetts,"1,616,487","878,502","207,995",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Michigan,"2,170,418","1,953,139","108,944",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Minnesota,"1,168,266","1,109,659","160,760",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Mississippi,"404,964","573,230","16,726",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Missouri,"1,111,138","1,189,924","58,830",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Montana,"137,126","240,178","33,693",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Nebraska,"231,780","433,862","31,377",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Nebraska CD-1,"86,946","142,562","12,515",https://sos.nebraska.gov/sites/sos.nebraska.gov/files/doc/elections/2000/2000%20General.pdf
+2000,Nebraska CD-2,"88,975","131,485","10,552",https://sos.nebraska.gov/sites/sos.nebraska.gov/files/doc/elections/2000/2000%20General.pdf
+2000,Nebraska CD-3,"55,859","159,815","8,310",https://sos.nebraska.gov/sites/sos.nebraska.gov/files/doc/elections/2000/2000%20General.pdf
+2000,Nevada,"279,978","301,575","27,417",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,New Hampshire,"266,348","273,559","29,174",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,New Jersey,"1,788,850","1,284,173","114,203",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,New Mexico,"286,783","286,417","25,405",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,New York,"4,113,791","2,405,676","310,928",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,North Carolina,"1,257,692","1,631,163","22,407",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,North Dakota,"95,284","174,852","18,120",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Ohio,"2,186,190","2,351,209","168,058",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Oklahoma,"474,276","744,337","15,616",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Oregon,"720,342","713,577","100,049",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Pennsylvania,"2,485,967","2,281,127","146,025",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Rhode Island,"249,508","130,555","29,049",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,South Carolina,"566,039","786,426","31,219",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,South Dakota,"118,804","190,700","6,765",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Tennessee,"981,720","1,061,949","32,512",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Texas,"2,433,746","3,799,639","174,252",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Utah,"203,053","515,096","52,605",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Vermont,"149,022","119,775","25,511",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Virginia,"1,217,290","1,437,490","84,667",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Washington,"1,247,652","1,108,864","130,917",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,West Virginia,"295,497","336,475","16,152",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Wisconsin,"1,242,987","1,237,279","118,341",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,Wyoming,"60,481","147,947","9,923",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2000,,"50,999,897","50,456,002","3,949,201",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2000/
+2004,Alabama,"693,933","1,176,394","13,122",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Alaska,"111,025","190,889","10,684",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Arizona,"893,524","1,104,294","14,767",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Arkansas,"469,953","572,898","12,094",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,California,"6,745,485","5,509,826","166,541",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Colorado,"1,001,725","1,101,256","27,343",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Connecticut,"857,488","693,826","27,455",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Delaware,"200,152","171,660","3,378",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,District of Columbia,"202,970","21,256","3,360",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Florida,"3,583,544","3,964,522","61,744",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Georgia,"1,366,149","1,914,254","21,472",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Hawaii,"231,708","194,191","3,114",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Idaho,"181,098","409,235","8,114",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Illinois,"2,891,550","2,345,946","36,826",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Indiana,"969,011","1,479,438","19,553",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Iowa,"741,898","751,957","13,053",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Kansas,"434,993","736,456","16,307",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Kentucky,"712,733","1,069,439","13,710",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Louisiana,"820,299","1,102,169","20,638",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Maine,"396,842","330,201","13,709",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Maine CD-1,"211,703","165,824","6,865",https://web.archive.org/web/20081002003944/http://www.maine.gov/sos/cec/elec/2004n/pr.htm
+2004,Maine CD-2,"185,139","164,377","6,844",https://web.archive.org/web/20081002003944/http://www.maine.gov/sos/cec/elec/2004n/pr.htm
+2004,Maryland,"1,334,493","1,024,703","27,482",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Massachusetts,"1,803,800","1,071,109","37,479",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Michigan,"2,479,183","2,313,746","46,323",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Minnesota,"1,445,014","1,346,695","36,678",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Mississippi,"458,094","684,981","9,070",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Missouri,"1,259,171","1,455,713","16,480",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Montana,"173,710","266,063","10,672",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Nebraska,"254,328","512,814","11,044",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Nebraska CD-1,"96,314","169,888","3,887",https://uselectionatlas.org/RESULTS/data.php?year=2004&fips=31&f=0&off=0&elect=0&datatype=cd&def=1
+2004,Nebraska CD-2,"97,858","153,041","3,461",https://uselectionatlas.org/RESULTS/data.php?year=2004&fips=31&f=0&off=0&elect=0&datatype=cd&def=1
+2004,Nebraska CD-3,"60,156","189,885","3,623",https://uselectionatlas.org/RESULTS/data.php?year=2004&fips=31&f=0&off=0&elect=0&datatype=cd&def=1
+2004,Nevada,"397,190","418,690","13,707",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,New Hampshire,"340,511","331,237","5,990",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,New Jersey,"1,911,430","1,670,003","30,258",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,New Mexico,"370,942","376,930","8,432",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,New York,"4,314,280","2,962,567","114,189",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,North Carolina,"1,525,849","1,961,166","13,992",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,North Dakota,"111,052","196,651","5,130",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Ohio,"2,741,167","2,859,768","26,973",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Oklahoma,"503,966","959,792",0,https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Oregon,"943,163","866,831","26,788",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Pennsylvania,"2,938,095","2,793,847","37,648",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Rhode Island,"259,760","169,046","8,323",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,South Carolina,"661,699","937,974","18,057",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,South Dakota,"149,244","232,584","6,387",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Tennessee,"1,035,160","1,383,336","16,467",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Texas,"2,832,704","4,526,917","51,144",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Utah,"241,199","663,742","22,903",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Vermont,"184,067","121,180","7,062",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Virginia,"1,454,742","1,716,959","26,666",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Washington,"1,510,201","1,304,894","43,989",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,West Virginia,"326,541","423,778","5,568",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Wisconsin,"1,489,504","1,478,120","29,383",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,Wyoming,"70,776","167,629","5,023",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2004,,"59,028,444","62,040,610","1,226,291",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2004/
+2008,Alabama,"813,479","1,266,546","19,794",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Alaska,"123,594","193,841","8,762",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Arizona,"1,034,707","1,230,111","28,657",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Arkansas,"422,310","638,017","26,290",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,California,"8,274,473","5,011,781","275,646",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Colorado,"1,288,633","1,073,629","39,200",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Connecticut,"997,773","629,428","19,597",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Delaware,"255,459","152,374","4,579",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,District of Columbia,"245,800","17,367","2,686",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Florida,"4,282,367","4,046,219","63,046",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Georgia,"1,844,123","2,048,759","31,604",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Hawaii,"325,871","120,566","7,131",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Idaho,"236,440","403,012","15,670",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Illinois,"3,419,348","2,031,179","71,844",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Indiana,"1,374,039","1,345,648","31,367",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Iowa,"828,940","682,379","25,804",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Kansas,"514,765","699,655","21,452",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Kentucky,"751,985","1,048,462","26,173",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Louisiana,"782,989","1,148,275","29,497",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Maine,"421,923","295,273","13,967",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Maine CD-1,"232,145","144,604","6,877",https://www.maine.gov/sos/cec/elec/results/2008-09/tabs-can-pr-cnty-11-08.html
+2008,Maine CD-2,"189,778","150,669","7,090",https://www.maine.gov/sos/cec/elec/results/2008-09/tabs-can-pr-cnty-11-08.html
+2008,Maryland,"1,629,467","959,862","42,267",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Massachusetts,"1,904,098","1,108,854","68,034",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Michigan,"2,872,579","2,048,639","80,548",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Minnesota,"1,573,354","1,275,409","61,606",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Mississippi,"554,662","724,597","10,606",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Missouri,"1,441,911","1,445,814","37,480",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Montana,"232,159","243,882","15,872",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Nebraska,"333,319","452,979","14,983",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Nebraska CD-1,"121,411","148,179","4,303",https://sos.nebraska.gov/sites/sos.nebraska.gov/files/doc/elections/2008/2008%20General%20Canvass%20Book.pdf
+2008,Nebraska CD-2,"138,809","135,439","3,561",https://sos.nebraska.gov/sites/sos.nebraska.gov/files/doc/elections/2008/2008%20General%20Canvass%20Book.pdf
+2008,Nebraska CD-3,"73,099","169,361","4,282",https://sos.nebraska.gov/sites/sos.nebraska.gov/files/doc/elections/2008/2008%20General%20Canvass%20Book.pdf
+2008,Nevada,"533,736","412,827","21,285",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,New Hampshire,"384,826","316,534","9,610",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,New Jersey,"2,215,422","1,613,207","39,608",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,New Mexico,"472,422","346,832","10,904",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,New York,"4,804,945","2,752,771","83,215",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,North Carolina,"2,142,651","2,128,474","39,664",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,North Dakota,"141,403","168,887","6,742",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Ohio,"2,940,044","2,677,820","90,486",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Oklahoma,"502,496","960,165",0,https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Oregon,"1,037,291","738,475","52,098",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Pennsylvania,"3,276,363","2,655,885","81,024",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Rhode Island,"296,571","165,391","9,804",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,South Carolina,"862,449","1,034,896","23,624",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,South Dakota,"170,924","203,054","7,997",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Tennessee,"1,087,437","1,479,178","33,134",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Texas,"3,528,633","4,479,328","69,834",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Utah,"327,670","596,030","28,670",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Vermont,"219,262","98,974","6,810",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Virginia,"1,959,532","1,725,005","38,723",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Washington,"1,750,848","1,229,216","56,814",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,West Virginia,"303,857","397,466","12,128",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Wisconsin,"1,677,211","1,262,393","43,813",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,Wyoming,"82,868","164,958","6,832",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2008,,"69,498,516","59,948,323","1,866,981",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2008/
+2012,Alabama,"795,696","1,255,925","22,717",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Alaska,"122,640","164,676","13,179",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Arizona,"1,025,232","1,233,654","40,368",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Arkansas,"394,409","647,744","27,315",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,California,"7,854,285","4,839,958","344,304",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Colorado,"1,323,102","1,185,243","61,177",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Connecticut,"905,109","634,899","18,985",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Delaware,"242,584","165,484","5,853",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,District of Columbia,"267,070","21,381","5,313",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Florida,"4,237,756","4,163,447","72,976",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Georgia,"1,773,827","2,078,688","47,535",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Hawaii,"306,658","121,015","7,024",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Idaho,"212,787","420,911","18,576",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Illinois,"3,019,512","2,135,216","87,286",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Indiana,"1,154,275","1,422,872","51,104",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Iowa,"822,544","730,617","29,019",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Kansas,"439,908","689,809","26,611",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Kentucky,"679,370","1,087,190","30,652",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Louisiana,"809,141","1,152,262","32,662",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Maine,"401,306","292,276","19,598",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Maine CD-1,"223,035","142,937","8,447",https://web.archive.org/web/20160328090648/https://www.archives.gov/federal-register/electoral-college/2012-certificates/pdfs/ascertainment-maine.pdf
+2012,Maine CD-2,"177,998","149,215","9,013",https://web.archive.org/web/20160328090648/https://www.archives.gov/federal-register/electoral-college/2012-certificates/pdfs/ascertainment-maine.pdf
+2012,Maryland,"1,677,844","971,869","57,614",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Massachusetts,"1,921,761","1,188,460","58,163",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Michigan,"2,564,569","2,115,256","51,136",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Minnesota,"1,546,167","1,320,225","70,169",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Mississippi,"562,949","710,746","11,889",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Missouri,"1,223,796","1,482,440","51,087",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Montana,"201,839","267,928","14,281",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Nebraska,"302,081","475,064","17,234",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Nebraska CD-1,"108,082","152,021","4,609",https://sos.nebraska.gov/sites/sos.nebraska.gov/files/doc/elections/2012/2012-general-canvass.pdf
+2012,Nebraska CD-2,"121,889","140,976","3,862",https://sos.nebraska.gov/sites/sos.nebraska.gov/files/doc/elections/2012/2012-general-canvass.pdf
+2012,Nebraska CD-3,"72,110","182,067","5,046",https://sos.nebraska.gov/sites/sos.nebraska.gov/files/doc/elections/2012/2012-general-canvass.pdf
+2012,Nevada,"531,373","463,567","19,978",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,New Hampshire,"369,561","329,918","11,493",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,New Jersey,"2,126,610","1,478,749","37,623",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,New Mexico,"415,335","335,788","32,635",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,New York,"4,485,877","2,490,496","104,987",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,North Carolina,"2,178,391","2,270,395","56,586",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,North Dakota,"124,827","188,163","9,637",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Ohio,"2,827,709","2,661,437","91,701",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Oklahoma,"443,547","891,325",0,https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Oregon,"970,488","754,175","64,607",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Pennsylvania,"2,990,274","2,680,434","82,962",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Rhode Island,"279,677","157,204","9,168",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,South Carolina,"865,941","1,071,645","26,532",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,South Dakota,"145,039","210,610","8,166",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Tennessee,"960,709","1,462,330","35,538",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Texas,"3,308,124","4,569,843","115,884",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Utah,"251,813","740,600","25,027",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Vermont,"199,239","92,698","7,353",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Virginia,"1,971,820","1,822,522","60,147",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Washington,"1,755,396","1,290,670","79,450",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,West Virginia,"238,269","417,655","14,514",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Wisconsin,"1,620,985","1,407,966","39,483",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,Wyoming,"69,286","170,962","8,813",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2012,,"65,915,795","60,933,504","2,236,111",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2012/
+2016,Alabama,"729,547","1,318,255","75,570",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Alaska,"116,454","163,387","38,767",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Arizona,"1,161,167","1,252,401","159,597",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Arkansas,"380,494","684,872","65,310",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,California,"8,753,792","4,483,814","943,998",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Colorado,"1,338,870","1,202,484","238,893",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Connecticut,"897,572","673,215","74,133",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Delaware,"235,603","185,127","23,084",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,District of Columbia,"282,830","12,723","15,715",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Florida,"4,504,975","4,617,886","297,178",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Georgia,"1,877,963","2,089,104","147,665",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Hawaii,"266,891","128,847","33,199",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Idaho,"189,765","409,055","91,435",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Illinois,"3,090,729","2,146,015","299,680",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Indiana,"1,033,126","1,557,286","144,546",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Iowa,"653,669","800,983","111,379",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Kansas,"427,005","671,018","86,379",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Kentucky,"628,854","1,202,971","92,324",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Louisiana,"780,154","1,178,638","70,240",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Maine,"357,735","335,593","54,599",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Maine CD-1,"212,774","154,384","27,171",https://www.archives.gov/files/electoral-college/2016/ascertainment-maine.pdf
+2016,Maine CD-2,"144,817","181,177","27,422",https://www.archives.gov/files/electoral-college/2016/ascertainment-maine.pdf
+2016,Maryland,"1,677,928","943,169","160,349",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Massachusetts,"1,995,196","1,090,893","238,957",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Michigan,"2,268,839","2,279,543","250,902",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Minnesota,"1,367,825","1,323,232","254,146",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Mississippi,"485,131","700,714","23,512",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Missouri,"1,071,068","1,594,511","143,026",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Montana,"177,709","279,240","40,198",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Nebraska,"284,494","495,961","63,772",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Nebraska CD-1,"100,132","158,642","23,588",https://sos.nebraska.gov/sites/sos.nebraska.gov/files/doc/elections/2016/2016-canvass-book.pdf
+2016,Nebraska CD-2,"131,030","137,564","23,086",https://sos.nebraska.gov/sites/sos.nebraska.gov/files/doc/elections/2016/2016-canvass-book.pdf
+2016,Nebraska CD-3,"53,332","199,755","17,173",https://sos.nebraska.gov/sites/sos.nebraska.gov/files/doc/elections/2016/2016-canvass-book.pdf
+2016,Nevada,"539,260","512,058","74,067",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,New Hampshire,"348,526","345,790","49,980",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,New Jersey,"2,148,278","1,601,933","123,835",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,New Mexico,"385,234","319,667","93,418",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,New York,"4,556,142","2,819,557","345,791",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,North Carolina,"2,189,316","2,362,631","189,617",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,North Dakota,"93,758","216,794","33,808",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Ohio,"2,394,169","2,841,006","261,318",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Oklahoma,"420,375","949,136","83,481",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Oregon,"1,002,106","782,403","216,827",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Pennsylvania,"2,926,441","2,970,733","268,304",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Rhode Island,"252,525","180,543","31,076",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,South Carolina,"855,373","1,155,389","92,265",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,South Dakota,"117,458","227,721","24,914",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Tennessee,"870,695","1,522,925","114,407",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Texas,"3,877,868","4,685,047","406,311",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Utah,"310,676","515,231","305,523",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Vermont,"178,573","95,369","41,125",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Virginia,"1,981,473","1,769,443","233,715",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Washington,"1,742,718","1,221,747","352,554",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,West Virginia,"188,794","489,371","36,258",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Wisconsin,"1,382,536","1,405,284","188,330",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,Wyoming,"55,973","174,419","25,457",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2016,,"65,853,514","62,984,828","7,830,934",https://www.fec.gov/introduction-campaign-finance/election-results-and-voting-information/federal-elections-2016/
+2020,Alabama,"849,624","1,441,170","32,488",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Alaska,"153,778","189,951","15,801",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Arizona,"1,672,143","1,661,686","53,497",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Arkansas,"423,932","760,647","34,490",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,California,"11,110,250","6,006,429","384,202",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Colorado,"1,804,352","1,364,607","87,993",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Connecticut,"1,080,680","715,291","28,309",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Delaware,"296,268","200,603","7,139",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,District of Columbia,"317,323","18,586","8,447",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Florida,"5,297,045","5,668,731","101,680",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Georgia,"2,473,633","2,461,854","62,229",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Hawaii,"366,130","196,864","11,475",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Idaho,"287,021","554,119","26,874",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Illinois,"3,471,915","2,446,891","114,938",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Indiana,"1,242,416","1,729,519","61,186",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Iowa,"759,061","897,672","34,138",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Kansas,"570,323","771,406","30,574",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Kentucky,"772,474","1,326,646","37,648",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Louisiana,"856,034","1,255,776","36,252",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Maine,"435,072","360,737","23,652",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Maine CD-1,"266,376","164,045","12,691",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Maine CD-2,"168,696","196,692","10,961",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Maryland,"1,985,023","976,414","75,593",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Massachusetts,"2,382,202","1,167,202","81,999",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Michigan,"2,804,040","2,649,852","85,409",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Minnesota,"1,717,077","1,484,065","76,029",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Mississippi,"539,398","756,764","17,597",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Missouri,"1,253,014","1,718,736","54,212",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Montana,"244,786","343,602","15,252",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Nebraska,"374,583","556,846","20,283",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Nebraska CD-1,"132,261","180,290","9,335",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Nebraska CD-2,"176,468","154,377","8,821",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Nebraska CD-3,"65,854","222,179","6,798",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Nevada,"703,486","669,890","32,000",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,New Hampshire,"424,937","365,660","15,608",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,New Jersey,"2,608,335","1,883,274","57,744",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,New Mexico,"501,614","401,894","20,457",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,New York,"5,230,985","3,244,798","119,043",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,North Carolina,"2,684,292","2,758,775","81,737",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,North Dakota,"114,902","235,595","11,322",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Ohio,"2,679,165","3,154,834","88,203",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Oklahoma,"503,890","1,020,280","36,529",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Oregon,"1,340,383","958,448","75,490",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Pennsylvania,"3,458,229","3,377,674","79,380",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Rhode Island,"307,486","199,922","10,349",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,South Carolina,"1,091,541","1,385,103","36,685",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,South Dakota,"150,471","261,043","11,095",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Tennessee,"1,143,711","1,852,475","57,665",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Texas,"5,259,126","5,890,347","165,583",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Utah,"560,282","865,140","62,867",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Vermont,"242,820","112,704","11,904",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Virginia,"2,413,568","1,962,430","84,526",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Washington,"2,369,612","1,584,651","133,368",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,West Virginia,"235,984","545,382","13,286",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Wisconsin,"1,630,866","1,610,184","56,991",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,Wyoming,"73,491","193,559","9,715",https://www.presidency.ucsb.edu/statistics/elections/2020
+2020,,"81,268,773","74,216,728","2,890,933",https://www.presidency.ucsb.edu/statistics/elections/2020
+2024,,"75,019,230","77,303,568","2,878,359",https://www.presidency.ucsb.edu/statistics/elections/2024
