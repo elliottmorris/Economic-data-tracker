@@ -6,7 +6,8 @@ library(zoo)
 # wrangle data -------------------------------
 # system("Rscript _scripts/01_wrangle_fred.R")
 dat = read_csv('_data/fred_data_wide.csv') %>%
-  filter(day(date) == 1 | date == max(date))
+  filter(day(date) %in% c(1,14) | date >= max(date) - 90) %>%
+  filter(date >= ymd('1980-01-01'))
 
 # transform series to be properly pos/negative coded
 inverse = c('Unemployment','CPI') 
@@ -30,7 +31,7 @@ gdp = dat$GDP
 dat$GDP = NULL
 
 # only keep GDP for pub dates, to avoid overfitting model
-gdp_dates = read_csv('_data/gdp_pub_dates.csv')
+gdp_dates = read_csv('_data/gdp_pub_dates.csv') %>% filter(date >= min(dates))
 gdp = gdp[dates %in% gdp_dates$date]
 gdp_dates = gdp_dates[!is.na(gdp),]
 gdp = gdp[!is.na(gdp)]
@@ -46,7 +47,57 @@ training_rows = tibble(t = times, present = times %in% gdp_times) %>%
   filter((row_number() == 1 | present) | keep_t) %>%
   ungroup() %>% pull(row)
 length(training_rows)
+# override:
+training_rows = 1:length(times)
 
+# import natl election results ---------------------------------------------
+election_results = read_csv('_data/presidential_results.csv') %>%
+  filter(is.na(state)) %>%
+  mutate(dem = dem_votes / (dem_votes + gop_votes),
+         rep = gop_votes / (dem_votes + gop_votes)) %>%
+  select(year,dem,rep) %>%
+  mutate(inc_margin =
+           ifelse(year %in% c(1948, 1952, 1964, 1968, 1980,
+                              1996, 2000, 2012, 2016, 2024),
+                  dem - rep, rep - dem))
+
+election_results = 
+  read_csv('_data/election_dates.csv') %>%
+  left_join(election_results)
+
+election_results = 
+  election_results %>% 
+  left_join(
+    tibble(year = seq(1944,2024,4),
+           inc_terms = c(3,4,5,1,2,1,2,1,2,1,1,2,3,1,2,1,2,1,2,1,1)) %>%
+      mutate(inc_term1 = ifelse(inc_terms == 1, 1, 0),
+             inc_terms_2plus = ifelse(inc_terms >1, 1, 0))
+  ) %>%
+  mutate(inc_party = ifelse(year %in% c(1948, 1952, 1964, 1968, 1980,
+                                        1996, 2000, 2012, 2016, 2024),
+                            'DEM','REP'),
+         inc_party_dem = ifelse(inc_party == 'DEM', 1, 0),
+         inc_vote =
+           ifelse(inc_party == 'DEM',
+                  dem / (dem + rep), rep / (dem + rep)),
+  ) %>%
+  mutate(polarized_dummy = ifelse(year > 1996, 1, 0),
+  ) %>%
+  mutate(president_running = 
+           case_when(year %in% c(1948, 1964, 1980, 1996, 2012, # D
+                                 1956, 1972, 1984, 1992, 2004, 2020 # R
+           ) ~ 1,
+           T ~ 0)) 
+
+
+election_results  = election_results %>%
+  mutate(time = floor(as.numeric(election_date - min(dates)) / time_divisor) + 1) %>% 
+  filter(time >= 1) %>%
+  filter(time <= max_T) 
+
+N_election_obs = nrow(election_results)
+y_potus = election_results$inc_margin
+potus_t = election_results$time
 
 # mutate for stan ---------------------------
 # Suppose dat is a D x N matrix (with some NA values)
@@ -102,7 +153,11 @@ stan_data = list(
   
   N_gdp_obs = length(gdp),
   y_gdp = gdp,
-  gdp_t = gdp_times
+  gdp_t = gdp_times,
+  
+  N_election_obs = N_election_obs,
+  y_potus = y_potus,
+  potus_t = potus_t
 )
 
 
@@ -121,7 +176,7 @@ fit = model$sample(
   data = stan_data,
   chains = 4,
   parallel_chains = 4,
-  iter_warmup = 250,
+  iter_warmup = 150,
   iter_sampling = 150,
   init = 1,
   refresh = 10
@@ -134,10 +189,13 @@ fit = model$sample(
 # )
 
 # plot predictions of gfpand actual as points
-econ_index = fit$summary('F',median)$median
-econ_index_se =  fit$summary('F',sd)$sd
+econ_index = fit$summary('f',median)$median
+econ_index_se =  fit$summary('f',sd)$sd
 
-tibble(index = econ_index[gdp_times], 
+hist(fit$summary('f',median)$median,breaks=100)
+
+# predict gdp?
+gg1 = tibble(index = econ_index[gdp_times], 
        se = econ_index_se[gdp_times],
        gdp = gdp) %>%
   ggplot(., aes(x = index, y = gdp)) + 
@@ -145,7 +203,11 @@ tibble(index = econ_index[gdp_times],
   geom_pointrange(aes(xmin = index - se*2, xmax = index + se*2)) + 
   geom_abline() + 
   geom_smooth(method = 'lm') +
-  theme_minimal()
+  theme_minimal() +
+  labs(x = 'Predicted annual real GDP change on release date',
+       y = 'Actual GDP print')
+gg1
+ggsave(plot = gg1, filename = '_figures/gdp-fit.png',width = 6, height = 6,bg = 'white')
 
 # plot predictions of econ variables and actuals
 tibble(y_hat = fit$summary('y_hat',median)$median,
@@ -156,6 +218,23 @@ tibble(y_hat = fit$summary('y_hat',median)$median,
   geom_smooth(method = 'lm') +
   theme_minimal()
 
+# plot predictions of elections and actual
+gg2 = tibble(y_hat = fit$summary('y_potus_hat',median)$median,
+       y_obs = y_potus,
+       year = election_results$year) %>%
+  ggplot(., aes(x = y_obs, y = y_hat)) + 
+  geom_text(aes(label = year)) + 
+  geom_abline() + 
+  geom_smooth(method = 'lm') +
+  theme_minimal() +
+  labs(x = 'Predicted incumbent vote margin on election day',
+       y = 'Actual incumbent vote margin')
+
+gg2
+ggsave(plot = gg2, filename = '_figures/election-fit.png',width = 6, height = 6,bg = 'white')
+
+fit$summary(c('alpha_potus','beta_potus','y_potus_sigma'),median,sd)
+
 # plot predictions and actual as line chart 
 tibble(x = dates, time = times) %>%
   left_join(tibble(time = 1:max_T,  f = econ_index, se = econ_index_se)) %>%
@@ -163,13 +242,15 @@ tibble(x = dates, time = times) %>%
   ggplot(., aes(x = x)) + 
   geom_line(aes(y = f, col = 'index')) +
   geom_ribbon(aes(ymin = f - se*2, ymax = f + se*2, fill = 'index'),col=NA,alpha=0.3) +
+  geom_hline(yintercept = 2) +
   geom_point(aes(y = gdp, col = 'gdp')) +
   scale_x_date(date_breaks = '4 year', date_labels = '%Y')  +
   scale_y_continuous(breaks = seq(-20,20,2)) +
   coord_cartesian(xlim=c(ymd('2007-01-01'), Sys.Date())) +
   scale_color_manual(values=c('gdp' = 'blue',' index' = 'gray')) +
   scale_fill_manual(values=c('gdp' = 'blue',' index' = 'gray')) +
-  theme_minimal()
+  theme_minimal() +
+  geom_vline(xintercept = election_results$election_date)
 
 tibble(x = dates, time = times) %>%
   left_join(tibble(time = 1:max_T,  f = econ_index, se = econ_index_se)) %>%
@@ -178,9 +259,10 @@ tibble(x = dates, time = times) %>%
   geom_line(aes(y = f, col = 'index')) +
   geom_ribbon(aes(ymin = f - se*2, ymax = f + se*2, fill = 'index'),col=NA,alpha=0.3) +
   geom_point(aes(y = gdp, col = 'gdp')) +
+  geom_hline(yintercept = 2) +
   scale_x_date(date_breaks = '4 year', date_labels = '%Y')  +
   scale_y_continuous(breaks = seq(-20,20,2)) +
-  coord_cartesian(xlim=c(ymd('2022-01-01'), Sys.Date())) +
+  coord_cartesian(xlim=c(ymd('2019-01-01'), Sys.Date())) +
   scale_color_manual(values=c('gdp' = 'blue',' index' = 'gray')) +
   scale_fill_manual(values=c('gdp' = 'blue',' index' = 'gray')) +
   theme_minimal()
@@ -197,10 +279,14 @@ tibble(label = names(dat),
   ggplot(., aes(x = loading, y = label)) + 
   geom_col()
 
+# plot characteristic of 
 fit$summary(c('ar_alpha','rho','ar_sigma'),median,sd)
 
+fit$summary(c('vol_ar_alpha','vol_rho'),median,sd)
+plot(fit$summary('f_vol',median)$median, type = 'l')
+
 # look at gdp regression and fit
-fit$summary(c('alpha','beta','gamma'),median,sd)
+fit$summary(c('alpha','beta','gamma','y_gdp_sigma'),median,sd)
 
 # look at all trends in variables + index
 tibble(x = dates, time = times) %>%
@@ -249,45 +335,8 @@ ei = tibble(date = as_date(min(ei$date):max(ei$date))) %>%
 ei %>% filter(date >= ymd('2017-01-01')) %>%
   write_csv('_data/economic_index.csv')
 
-# import natl election results ---------------------------------------------
-election_results = read_csv('_data/presidential_results.csv') %>%
-  filter(is.na(state)) %>%
-  mutate(dem = dem_votes / (dem_votes + gop_votes),
-         rep = gop_votes / (dem_votes + gop_votes)) %>%
-  select(year,dem,rep) %>%
-  mutate(inc_margin =
-           ifelse(year %in% c(1948, 1952, 1964, 1968, 1980,
-                              1996, 2000, 2012, 2016, 2024),
-                  dem - rep, rep - dem))
-
-election_results = 
-  read_csv('_data/election_dates.csv') %>%
-  left_join(election_results)
-
-election_results = 
-  election_results %>% 
-  left_join(
-    tibble(year = seq(1944,2024,4),
-           inc_terms = c(3,4,5,1,2,1,2,1,2,1,1,2,3,1,2,1,2,1,2,1,1)) %>%
-      mutate(inc_term1 = ifelse(inc_terms == 1, 1, 0),
-             inc_terms_2plus = ifelse(inc_terms >1, 1, 0))
-  ) %>%
-  mutate(inc_party = ifelse(year %in% c(1948, 1952, 1964, 1968, 1980,
-                                        1996, 2000, 2012, 2016, 2024),
-                            'DEM','REP'),
-         inc_party_dem = ifelse(inc_party == 'DEM', 1, 0),
-         inc_vote =
-           ifelse(inc_party == 'DEM',
-                  dem / (dem + rep), rep / (dem + rep)),
-  ) %>%
-  mutate(polarized_dummy = ifelse(year > 1996, 1, 0),
-  ) %>%
-  mutate(president_running = 
-           case_when(year %in% c(1948, 1964, 1980, 1996, 2012, # D
-                                 1956, 1972, 1984, 1992, 2004, 2020 # R
-           ) ~ 1,
-           T ~ 0)) 
-
+# look at corr with election results
+## factor
 election_results %>%
   left_join(
     ei %>%
@@ -297,5 +346,27 @@ election_results %>%
   geom_text(aes(label = year)) +
   theme_minimal() + 
   geom_smooth(method = 'lm')
+
+## components
+dat %>%
+  mutate(date = dates) %>%
+  gather(series, value, 1:(ncol(.)-1)) %>%
+  mutate(year = year(date)) %>%
+  left_join(election_results) %>%
+  group_by(year) %>%
+  filter(abs(date - election_date) == min(abs(date - election_date))) %>%
+  group_by(series) %>%
+  summarise(cor_with_elec = cor(value, inc_margin, use = 'complete.obs')) %>%
+  bind_rows(
+    election_results %>%
+      left_join(
+        ei %>%
+          mutate(election_date = date)
+      ) %>% summarise(series = 'factor',
+                      cor_with_elec = cor(f, inc_margin, use = 'complete.obs'))
+  ) %>%
+  arrange(desc(cor_with_elec)) %>%
+  write_csv('_data/series_cor.csv')
+
 
 
