@@ -100,9 +100,9 @@ model {
     sigma_y ~ std_normal();
     sigma_f ~ std_normal();
     
-    // Priors on qualities of lambda
-    mu_lambda ~ normal(0.5, 0.5);
-    sd_lambda ~ normal(0.25, 0.25);
+    // Priors on qualities of lambda: Want most to be positive, non-zero
+    mu_lambda ~ normal(0.5, 0.1);
+    sd_lambda ~ normal(0.1, 0.1);
 
     // Priors for GDP forecast
     alpha_raw ~ std_normal();
@@ -110,17 +110,18 @@ model {
     beta_raw ~ std_normal();
     beta_scale ~ std_normal();
     gamma ~ std_normal();
-    y_gdp_sigma ~ cauchy(0, 0.01);
+    y_gdp_sigma ~ cauchy(0, 0.1); // tight prior on sigma enforces fit
 
     // priors for potus elec forecast
     alpha_raw_potus ~ std_normal();
     alpha_scale_potus ~ std_normal();
     beta_raw_potus ~ std_normal();
     beta_scale_potus ~ std_normal();
-    y_potus_sigma ~ cauchy(0, 0.01);
+    y_potus_sigma ~ cauchy(0, 0.1); // tight prior on sigma enforces fit
     
     // Latent factor evolution: vectorized AR(1) specifications. informative prior 
-    f ~ normal(prior_f_t, 1);
+    f ~ std_normal();
+    f ~ normal(prior_f_t, 0.5);
     
     // vol_ar_alpha ~ std_normal();
     vol_rho ~ std_normal();
@@ -137,10 +138,10 @@ model {
     //// economic observations 
     y_obs ~ student_t(nu, y_hat, sigma_y); 
     // gdp now-cast, robust to noise. have to sum over month t to t+ 2
-    // y_gdp ~ normal(alpha +
-    //                     beta * f_quarterly_gdp_t +
-    //                     gamma * f_quarterly_gdp_t^2,
-    //                   y_gdp_sigma);
+    y_gdp ~ normal(alpha +
+                        beta * f_quarterly_gdp_t +
+                        gamma * f_quarterly_gdp_t^2,
+                      y_gdp_sigma);
     // pres election fit
     y_potus ~ normal(y_potus_hat, y_potus_sigma);
 }

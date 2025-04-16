@@ -6,7 +6,8 @@ library(zoo)
 # wrangle data -------------------------------
 # system("Rscript _scripts/01_wrangle_fred.R")
 dat = read_csv('_data/fred_data_wide.csv') %>%
-  filter(day(date) %in% c(1,14) | date >= max(date) - 90) %>%
+  # sampled data for faster model. Keep more recent observations tho
+  filter(day(date) %in% c(1,7,14,21) | date >= max(date) - 180) %>%
   filter(date >= ymd('1980-01-01'))
 
 # transform series to be properly pos/negative coded
@@ -176,8 +177,8 @@ fit = model$sample(
   data = stan_data,
   chains = 4,
   parallel_chains = 4,
-  iter_warmup = 150,
-  iter_sampling = 150,
+  iter_warmup = 250,
+  iter_sampling = 250,
   init = 1,
   refresh = 10
 )
@@ -189,14 +190,21 @@ fit = model$sample(
 # )
 
 # plot predictions of gfpand actual as points
-econ_index = fit$summary('f',median)$median
-econ_index_se =  fit$summary('f',sd)$sd
+indices = tibble(
+  econ_index = fit$summary('f',median)$median,
+  econ_index_se =  fit$summary('f',sd)$sd,
+  f_gdp = fit$summary('F',median)$median,
+  f_gdp_se =  fit$summary('F',sd)$sd,
+  f_potus = fit$summary('F_potus',median)$median,
+  f_potus_se =  fit$summary('F_potus',sd)$sd
+)
+
 
 hist(fit$summary('f',median)$median,breaks=100)
 
 # predict gdp?
-gg1 = tibble(index = econ_index[gdp_times], 
-       se = econ_index_se[gdp_times],
+gg1 = tibble(index = indices$f_gdp[gdp_times], 
+       se = indices$f_gdp_se[gdp_times],
        gdp = gdp) %>%
   ggplot(., aes(x = index, y = gdp)) + 
   geom_point() + 
@@ -237,7 +245,7 @@ fit$summary(c('alpha_potus','beta_potus','y_potus_sigma'),median,sd)
 
 # plot predictions and actual as line chart 
 tibble(x = dates, time = times) %>%
-  left_join(tibble(time = 1:max_T,  f = econ_index, se = econ_index_se)) %>%
+  left_join(tibble(time = 1:max_T,  f = indices$f_gdp, se = indices$f_gdp_se)) %>%
   left_join(tibble(time = gdp_times, gdp = gdp)) %>%
   ggplot(., aes(x = x)) + 
   geom_line(aes(y = f, col = 'index')) +
@@ -253,7 +261,7 @@ tibble(x = dates, time = times) %>%
   geom_vline(xintercept = election_results$election_date)
 
 tibble(x = dates, time = times) %>%
-  left_join(tibble(time = 1:max_T,  f = econ_index, se = econ_index_se)) %>%
+  left_join(tibble(time = 1:max_T,  f = indices$f_gdp, se = indices$f_gdp_se)) %>%
   left_join(tibble(time = gdp_times, gdp = gdp)) %>%
   ggplot(., aes(x = x)) + 
   geom_line(aes(y = f, col = 'index')) +
@@ -290,7 +298,7 @@ fit$summary(c('alpha','beta','gamma','y_gdp_sigma'),median,sd)
 
 # look at all trends in variables + index
 tibble(x = dates, time = times) %>%
-  left_join(tibble(time = 1:max_T,  f = econ_index)) %>%
+  left_join(tibble(time = 1:max_T,  f = indices$econ_index)) %>%
   left_join(tibble(time = gdp_times, gdp = gdp)) %>%
   mutate(gdp = na.approx(gdp,na.rm=F)) %>%
   cbind(dat) %>%
@@ -305,12 +313,12 @@ tibble(x = dates, time = times) %>%
 cor(dat[,-1],use='complete.obs')
 
 # predictions for last week
-tibble(date = 1:max_T, econ_index) %>%
+tibble(date = 1:max_T, indices$econ_index) %>%
   mutate(date = (min_date + date * time_divisor) -1 ) %>%
   filter(date >= Sys.Date() - 7)
 
 tibble(x = dates, time = times) %>%
-  left_join(tibble(time = 1:max_T,  f = econ_index)) %>%
+  left_join(tibble(time = 1:max_T,  f = indices$econ_index)) %>%
   #left_join(tibble(time = gdp_times, gdp = gdp)) %>%
   #mutate(gdp = na.approx(gdp,na.rm=F)) %>%
   cbind(dat) %>%
@@ -325,7 +333,8 @@ tibble(x = dates, time = times) %>%
   theme_minimal()
 
 # wrangle for exporting
-ei = tibble(date = min(dates) + ((1:max_T)-1)*time_divisor, f = econ_index)
+ei = tibble(date = min(dates) + ((1:max_T)-1)*time_divisor, 
+            f = indices$econ_index)
 
 ei = tibble(date = as_date(min(ei$date):max(ei$date))) %>%
   left_join(ei) %>%
