@@ -7,8 +7,7 @@ library(zoo)
 # system("Rscript _scripts/01_wrangle_fred.R")
 dat = read_csv('_data/fred_data_wide.csv') %>%
   # sampled data for faster model. Keep more recent observations tho
-  filter(day(date) %in% c(1,7,14,21) | date >= max(date) - 180) %>%
-  filter(date >= ymd('1980-01-01'))
+  filter(day(date) %in% c(1,7,14,21) | date >= max(date) - 180) %>% filter(date >= ymd('1980-01-01'))
 
 # transform series to be properly pos/negative coded
 inverse = c('Unemployment','CPI') 
@@ -177,8 +176,8 @@ fit = model$sample(
   data = stan_data,
   chains = 4,
   parallel_chains = 4,
-  iter_warmup = 250,
-  iter_sampling = 250,
+  iter_warmup = 200,
+  iter_sampling = 200,
   init = 1,
   refresh = 10
 )
@@ -230,7 +229,7 @@ tibble(y_hat = fit$summary('y_hat',median)$median,
 gg2 = tibble(y_hat = fit$summary('y_potus_hat',median)$median,
        y_obs = y_potus,
        year = election_results$year) %>%
-  ggplot(., aes(x = y_obs, y = y_hat)) + 
+  ggplot(., aes(x = y_hat, y = y_obs)) + 
   geom_text(aes(label = year)) + 
   geom_abline() + 
   geom_smooth(method = 'lm') +
@@ -245,11 +244,11 @@ fit$summary(c('alpha_potus','beta_potus','y_potus_sigma'),median,sd)
 
 # plot predictions and actual as line chart 
 tibble(x = dates, time = times) %>%
-  left_join(tibble(time = 1:max_T,  f = indices$f_gdp, se = indices$f_gdp_se)) %>%
+  left_join(tibble(time = 1:max_T,  f_gdp = indices$f_gdp, se = indices$f_gdp_se)) %>%
   left_join(tibble(time = gdp_times, gdp = gdp)) %>%
   ggplot(., aes(x = x)) + 
-  geom_line(aes(y = f, col = 'index')) +
-  geom_ribbon(aes(ymin = f - se*2, ymax = f + se*2, fill = 'index'),col=NA,alpha=0.3) +
+  geom_line(aes(y = f_gdp, col = 'index')) +
+  geom_ribbon(aes(ymin = f_gdp - se*2, ymax = f_gdp + se*2, fill = 'index'),col=NA,alpha=0.3) +
   geom_hline(yintercept = 2) +
   geom_point(aes(y = gdp, col = 'gdp')) +
   scale_x_date(date_breaks = '4 year', date_labels = '%Y')  +
@@ -333,6 +332,7 @@ tibble(x = dates, time = times) %>%
   theme_minimal()
 
 # wrangle for exporting
+write_csv(indices, '_data/full_index.csv')
 ei = tibble(date = min(dates) + ((1:max_T)-1)*time_divisor, 
             f = indices$econ_index)
 
@@ -343,6 +343,7 @@ ei = tibble(date = as_date(min(ei$date):max(ei$date))) %>%
 # output most recent reading
 ei %>% filter(date >= ymd('2017-01-01')) %>%
   write_csv('_data/economic_index.csv')
+read_csv('_data/economic_index.csv') %>% tail
 
 # look at corr with election results
 ## factor

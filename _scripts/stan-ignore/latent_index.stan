@@ -25,14 +25,14 @@ parameters {
     vector[T] f_std;                     // Latent factor (the index) for each time point.
     vector[N-1] mu_raw;                    // Intercepts for each variable.
     real<lower=1e-6,upper=10> mu_sigma;
-    vector[N] lambda;                // Loadings for each variable.
+    vector<lower=-2,upper=2>[N] lambda;                // Loadings for each variable.
     real<lower=0.01, upper=10> sigma_y;           // Measurement error standard deviation.
     real<lower=0.01, upper=10> sigma_f;           // State noise standard deviation for f.
     
     // coefficients for the stoch vol ar
     vector<lower=1e-06,upper=1>[T] f_vol;                     // Latent factor (the index) for each time point.
     real vol_ar_alpha;                 // AR intercept
-    real<lower=0, upper=1> vol_rho;     // AR(1) coefficient for f.
+    real<lower=0.5, upper=1> vol_rho;     // AR(1) coefficient for f.
 
     // coefficients for the factor ar
     real ar_alpha;                 // AR intercept
@@ -88,7 +88,11 @@ transformed parameters {
     // potus regression
     real alpha_potus = (alpha_raw_potus * alpha_scale_potus);
     real beta_potus = beta_raw_potus * beta_scale_potus;
-    vector[N_election_obs] y_potus_hat = alpha_potus + beta_potus * f[potus_t];
+    vector[N_election_obs] y_potus_hat;
+    // predict vote with average f value over last 6 months
+    for(i in 1:N_election_obs){
+      y_potus_hat[i] = alpha_potus + beta_potus * mean(f[(potus_t[i]-26):potus_t[i]]);
+    }
 }
 
 model {
@@ -110,23 +114,23 @@ model {
     beta_raw ~ std_normal();
     beta_scale ~ std_normal();
     gamma ~ std_normal();
-    y_gdp_sigma ~ cauchy(0, 0.1); // tight prior on sigma enforces fit
+    y_gdp_sigma ~ normal(0, 0.1); // tight prior on sigma enforces fit
 
     // priors for potus elec forecast
     alpha_raw_potus ~ std_normal();
     alpha_scale_potus ~ std_normal();
     beta_raw_potus ~ std_normal();
     beta_scale_potus ~ std_normal();
-    y_potus_sigma ~ cauchy(0, 0.1); // tight prior on sigma enforces fit
+    y_potus_sigma ~ normal(0, 0.1); // tight prior on sigma enforces fit
     
-    // Latent factor evolution: vectorized AR(1) specifications. informative prior 
-    f ~ std_normal();
-    f ~ normal(prior_f_t, 0.5);
+    // Latent factor: vectorized AR(1) specifications. informative prior 
+    f ~ cauchy(0,1);
+    f ~ student_t(4,prior_f_t,1);
     
-    // vol_ar_alpha ~ std_normal();
+    vol_ar_alpha ~ std_normal();
     vol_rho ~ std_normal();
     f_vol[1] ~ std_normal();
-    f_vol[2:T] ~ normal(vol_ar_alpha + vol_rho * f_vol[1:(T-1)], 1);
+    f_vol[2:T] ~ normal(vol_ar_alpha + vol_rho * f_vol[1:(T-1)], 0.1);
     
     ar_alpha ~ std_normal();
     rho ~ std_normal();
