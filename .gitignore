@@ -50,3 +50,9 @@ rsconnect/
 
 # Mac system files
 .DS_Store
+
+# Secret files
+.env
+
+# Python files
+**/__pycache__/**
