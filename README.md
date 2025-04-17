@@ -20,6 +20,16 @@ These graphs show how well the model predicts GDP change on dates of GDP release
 ![gdp predict](_figures/gdp-fit.png)
 ![election predict](_figures/election-fit.png)
 
+# Installation
+
+To use this repo, one should have [`Python`](https://www.python.org/downloads/) installed as well as
+[`uv`](https://github.com/astral-sh/uv). Once you have installed these, you will then want to install
+the dependencies needed to perform the data ingestion. To install these dependencies, you will
+use `uv` for this by entering the following into your Terminal:
+
+```{shell}
+uv venv
+```
 
 ### To-do
 
