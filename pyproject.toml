@@ -9,5 +9,7 @@ dependencies = [
     "dotenv>=0.9.9",
     "loguru>=0.7.3",
     "polars>=1.27.1",
+    "pyarrow>=19.0.1",
     "requests>=2.32.3",
+    "yfinance>=0.2.55",
 ]

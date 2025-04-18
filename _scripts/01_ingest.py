@@ -7,6 +7,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 from loguru import logger
 from requests import get
+from yfinance import download
 
 import polars as pl
 import os
@@ -35,13 +36,13 @@ except AssertionError:
 
 # Pull from API.
 # - Define end date for data.
-end_date = datetime.today().strftime('%Y-%m-%d')
+end_date = datetime.today().strftime("%Y-%m-%d")
 # - Define the list of series to pull data for.
 list_series = [
     "AHETPI", "CMRMTSPL", "CPIAUCSL", "HOUST", "INDPRO"
     , "PAYEMS", "GDPC1", "UMCSENT", "UNRATE", "W875RX1"
     , "TTLCONS", "RSAFS", "MANEMP", "AMTMNO"
-    , 'GCEC1', "EXPGSC1","IMPGSC1","BUSINV"
+    , 'GCEC1', "EXPGSC1", "IMPGSC1", "BUSINV", "^GSPC"
 ]
 # - Define the host.
 host = "https://api.stlouisfed.org/fred/series/observations"
@@ -50,6 +51,7 @@ df_temp = pl.DataFrame()
 # - Make calls.
 logger.success(f"Pulling FRED data between {start_date} - {end_date}")
 for i in list_series:
+    logger.info(f"Accessing data on {i}.")
     # Define the payload.
     params = {
         "series_id":i
@@ -58,41 +60,91 @@ for i in list_series:
         , "observation_start":start_date
         , "observation_end":end_date
     }
-    # Make request.
-    resp = get(host, params=params)
-    # Add to data.frame
-    try:
-        df_temp = pl.concat([
-            df_temp
-            , (
-                pl.DataFrame(resp.json())
-                .select(["observations"])
-                .unnest("observations")
-                .select(["date", "value"])
-                .rename({"value":i})
+    if i!="^GSPC":
+        # Make request.
+        resp = get(host, params=params)
+        if len(resp.json()["observations"])==0:
+            continue
+        else:
+            # Add to data.frame
+            if i=="AHETPI":
+                df_temp = pl.concat([
+                    df_temp
+                    , (
+                        pl.DataFrame(resp.json())
+                        .select(["observations"])
+                        .unnest("observations")
+                        .select(["date", "value"])
+                        .rename({"value":i})
+                        .cast({"date":pl.Date})
+                    )
+                ], how="horizontal")
+            else:
+                df_temp = df_temp.join(
+                    (
+                        pl.DataFrame(resp.json())
+                        .select(["observations"])
+                        .unnest("observations")
+                        .select(["date", "value"])
+                        .rename({"value":i})
+                        .cast({"date":pl.Date})
+                    )
+                    , how="full"
+                    , on="date"
+                    , coalesce=True
+                )
+    elif i=="^GSPC":
+        if len(df_temp)==0:
+            df_temp = (
+                pl.from_pandas(
+                    download(
+                        tickers="^GSPC"
+                        , start=start_date
+                        , end=end_date
+                        , interval="1d"
+                        , multi_level_index=False
+                    )
+                    , include_index=True
+                )
+                .select(["Date", "Close"])
+                .rename({"Date":"date", "Close":"SP500"})
+                .cast({"date":pl.Date})
             )
-        ], how="horizontal")
-    except pl.exceptions.DuplicateError:
-        df_temp = df_temp.join(
-            (
-                pl.DataFrame(resp.json())
-                .select(["observations"])
-                .unnest("observations")
-                .select(["date", "value"])
-                .rename({"value":i})
+        else:
+            # Get the SP500 data for GSPC
+            df_temp = df_temp.join(
+                (
+                    pl.from_pandas(
+                        download(
+                            tickers="^GSPC"
+                            , start=start_date
+                            , end=end_date
+                            , interval="1d"
+                            , multi_level_index=False
+                        )
+                        , include_index=True
+                    )
+                    .select(["Date", "Close"])
+                    .rename({"Date":"date", "Close":"SP500"})
+                    .cast({"date":pl.Date})
+                )
+                , how="full"
+                , on="date"
+                , coalesce=True
             )
-            , how="full"
-            , on="date"
-            , coalesce=True
-        )
-
 # If we have data already, just append it.
 try:
     assert os.path.exists(file_path)
-    df = pl.concat([df, df_temp], how="vertical_relaxed")
+    df = pl.concat([df, df_temp], how="diagonal_relaxed")
 except AssertionError:
     df = df_temp
 
+# Order by date and remove any duplicate rows.
+df = (
+    df
+    .unique()
+    .sort("date")
+)
 # Write to the parquet file.
 df.write_parquet(file_path)
 logger.success(f"File written to:{file_path}")
