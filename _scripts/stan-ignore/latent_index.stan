@@ -22,8 +22,8 @@ data {
 
 parameters {
     real<lower=3, upper=20> nu;              // Degrees of freedom for response variable
-    vector[T] f_std;                     // Latent factor (the index) for each time point.
-    vector[N-1] mu_raw;                    // Intercepts for each variable.
+    vector<lower=-10,upper=10>[T] f_std;                     // Latent factor (the index) for each time point.
+    vector<lower=-10,upper=10>[N-1] mu_raw;                    // Intercepts for each variable.
     real<lower=1e-6,upper=10> mu_sigma;
     vector<lower=-2,upper=2>[N] lambda;                // Loadings for each variable.
     real<lower=0.01, upper=10> sigma_y;           // Measurement error standard deviation.
@@ -31,11 +31,11 @@ parameters {
     
     // coefficients for the stoch vol ar
     vector<lower=1e-06,upper=1>[T] f_vol;                     // Latent factor (the index) for each time point.
-    real vol_ar_alpha;                 // AR intercept
+    real<lower=-10,upper=10> vol_ar_alpha;                 // AR intercept
     real<lower=0.5, upper=1> vol_rho;     // AR(1) coefficient for f.
 
     // coefficients for the factor ar
-    real ar_alpha;                 // AR intercept
+    real<lower=-10,upper=10> ar_alpha;                 // AR intercept
     real<lower=0.8, upper=1> rho;     // AR(1) coefficient for f.
     real<lower=1e-06, upper = 10> ar_sigma;
     
@@ -47,7 +47,7 @@ parameters {
     real<lower=0,upper=2> gamma;
     real<lower=1e-06> y_gdp_sigma;
     // regression to predict election results with faactor
-    real alpha_raw_potus;
+    real<lower=-10,upper=10> alpha_raw_potus;
     real<lower=1e-06, upper=1> alpha_scale_potus;
     real<lower=0> beta_raw_potus;
     real<lower=1e-06, upper=1> beta_scale_potus;
