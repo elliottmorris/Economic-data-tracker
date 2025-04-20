@@ -176,8 +176,8 @@ fit = model$sample(
   data = stan_data,
   chains = 4,
   parallel_chains = 4,
-  iter_warmup = 200,
-  iter_sampling = 200,
+  iter_warmup = 250,
+  iter_sampling = 250,
   init = 1,
   refresh = 10
 )
