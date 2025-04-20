@@ -32,7 +32,7 @@ def process_fred(x:get, series_name:str) -> pl.DataFrame:
         pl.DataFrame
     """
     return (
-        pl.DataFrame(x.json())
+        pl.DataFrame(x)
         .select(["observations"])
         .unnest("observations")
         .select(["date", "value"])
@@ -57,7 +57,7 @@ def process_sp(x:get, col_name:str) -> pl.DataFrame:
     """
     return (
         pl.from_pandas(
-            x.json()
+            x
             , include_index=True
         )
         .select(["Date", "Close"])
@@ -143,33 +143,15 @@ for i in list_series:
                 , process_fred(x=resp.json(), series_name=i[1])
             ], how="vertical")
     # If this is the SP500 data, then I will need to do the following.
-    elif i=="^GSPC":
+    elif i[0]=="^GSPC":
         # If the dataframe from the FRED data is empty, then
         # I should make the call to the SP500 and store it
         # in the dataframe. I will overwrite the empty df_temp
         # DataFrame object.
-        if len(df_temp)==0:
-            df_temp = (
-                pl.from_pandas(
-                    download(
-                        tickers="^GSPC"
-                        , start=start_date
-                        , end=end_date
-                        , interval="1d"
-                        , multi_level_index=False
-                    )
-                    , include_index=True
-                )
-                .select(["Date", "Close"])
-                .rename({"Date":"date", "Close":"SP500"})
-                .cast({"date":pl.Date})
-            )
-        # However, if there is data from the FRED API, then I will instead
-        # need to make a full join.
-        else:
-            # Get the SP500 data for GSPC
-            df_temp = df_temp.join(
-                (
+        df_temp = pl.concat(
+            [
+                df_temp
+                , (
                     pl.from_pandas(
                         download(
                             tickers="^GSPC"
@@ -181,13 +163,15 @@ for i in list_series:
                         , include_index=True
                     )
                     .select(["Date", "Close"])
-                    .rename({"Date":"date", "Close":"SP500"})
+                    .rename({"Date":"date", "Close":"value"})
                     .cast({"date":pl.Date})
+                    .with_columns(
+                        pl.lit(i[1]).alias("series")
+                    )
                 )
-                , how="full"
-                , on="date"
-                , coalesce=True
-            )
+            ]
+            , how="vertical_relaxed"
+        )
 # If we have data already, just vertically append it.
 # If I only have SP500 data, then df_temp will be
 # only two columns wide, therefore I will need to
@@ -196,11 +180,17 @@ for i in list_series:
 # out and add nulls for me.
 try:
     assert os.path.exists(file_path)
-    df = pl.concat([df, df_temp], how="diagonal_relaxed")
+    df = pl.concat(
+        [
+            df
+            , df_temp.pivot("series", index="date", values="value")
+        ]
+        , how="diagonal_relaxed"
+    )
 # If we do not have data already, then just rename the
 # df_temp object.
 except AssertionError:
-    df = df_temp
+    df = df_temp.pivot("series", index="date", values="value")
 # Order by date and remove any duplicate rows.
 df = (
     df
