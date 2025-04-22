@@ -8,7 +8,7 @@ that we are currently missing data. It will then
 append our existing data file any new data
 that has come through.
 """
-from datetime import datetime
+from datetime import datetime, date
 from dotenv import load_dotenv
 from loguru import logger
 from requests import get
@@ -116,7 +116,7 @@ list_series = [
 # - Define the host.
 host = "https://api.stlouisfed.org/fred/series/observations"
 # - Initialize temp dataframe.
-df_temp = pl.DataFrame()
+df_temp = pl.DataFrame(schema={"date":pl.Date, "value":pl.String, "series":pl.String})
 # - Make calls for each series.
 logger.success(f"Pulling FRED data between {start_date} - {end_date}")
 for i in list_series:
@@ -183,14 +183,14 @@ try:
     df = pl.concat(
         [
             df
-            , df_temp.pivot("series", index="date", values="value")
+            , df_temp
         ]
         , how="diagonal_relaxed"
     )
 # If we do not have data already, then just rename the
 # df_temp object.
 except AssertionError:
-    df = df_temp.pivot("series", index="date", values="value")
+    df = df_temp
 # Order by date and remove any duplicate rows.
 df = (
     df
