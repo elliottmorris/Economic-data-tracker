@@ -138,7 +138,7 @@ prior_f_t = sapply(1:max_T,
 # some EDA
 plot(gdp, type = 'l')
 plot(prior_f_t, type = 'l')
-
+dat %>% tail(100) %>% mutate(x = row_number()) %>% gather(var, value, 1:(ncol(.)-1)) %>% ggplot(aes(x=x,y=value,col=var)) + geom_line()
 # Bundle data for Stan:
 max_T
 stan_data = list(
@@ -176,8 +176,8 @@ fit = model$sample(
   data = stan_data,
   chains = 4,
   parallel_chains = 4,
-  iter_warmup = 200,
-  iter_sampling = 200,
+  iter_warmup = 250,
+  iter_sampling = 250,
   init = 1,
   refresh = 10
 )
@@ -379,4 +379,4 @@ dat %>%
   write_csv('_data/series_cor.csv')
 
 
-
+beepr::beep(2)

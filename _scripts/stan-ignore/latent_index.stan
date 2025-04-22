@@ -22,8 +22,8 @@ data {
 
 parameters {
     real<lower=3, upper=20> nu;              // Degrees of freedom for response variable
-    vector[T] f_std;                     // Latent factor (the index) for each time point.
-    vector[N-1] mu_raw;                    // Intercepts for each variable.
+    vector<lower=-10,upper=10>[T] f_std;                     // Latent factor (the index) for each time point.
+    vector<lower=-10,upper=10>[N-1] mu_raw;                    // Intercepts for each variable.
     real<lower=1e-6,upper=10> mu_sigma;
     vector<lower=-2,upper=2>[N] lambda;                // Loadings for each variable.
     real<lower=0.01, upper=10> sigma_y;           // Measurement error standard deviation.
@@ -31,27 +31,27 @@ parameters {
     
     // coefficients for the stoch vol ar
     vector<lower=1e-06,upper=1>[T] f_vol;                     // Latent factor (the index) for each time point.
-    real vol_ar_alpha;                 // AR intercept
-    real<lower=0.5, upper=1> vol_rho;     // AR(1) coefficient for f.
+    real<lower=-10,upper=10> vol_ar_alpha;                 // AR intercept
+    real<lower=0.75, upper=1> vol_rho;     // AR(1) coefficient for f.
 
     // coefficients for the factor ar
-    real ar_alpha;                 // AR intercept
+    real<lower=-10,upper=10> ar_alpha;                 // AR intercept
     real<lower=0.8, upper=1> rho;     // AR(1) coefficient for f.
     real<lower=1e-06, upper = 10> ar_sigma;
     
     // robust regression to predict GDP given factor
-    real<lower=0> alpha_raw;
+    real<lower=0,upper=10> alpha_raw;
     real<lower=1e-06, upper=1> alpha_scale;
-    real<lower=0> beta_raw;
+    real<lower=0,upper=10> beta_raw;
     real<lower=1e-06, upper=1> beta_scale;
     real<lower=0,upper=2> gamma;
-    real<lower=1e-06> y_gdp_sigma;
+    real<lower=1e-06,upper=10> y_gdp_sigma;
     // regression to predict election results with faactor
-    real alpha_raw_potus;
+    real<lower=-10,upper=10> alpha_raw_potus;
     real<lower=1e-06, upper=1> alpha_scale_potus;
-    real<lower=0> beta_raw_potus;
+    real<lower=0,upper=10> beta_raw_potus;
     real<lower=1e-06, upper=1> beta_scale_potus;
-    real<lower=1e-06> y_potus_sigma;
+    real<lower=1e-06,upper=10> y_potus_sigma;
 }
 
 transformed parameters {
@@ -129,8 +129,8 @@ model {
     
     vol_ar_alpha ~ std_normal();
     vol_rho ~ std_normal();
-    f_vol[1] ~ std_normal();
-    f_vol[2:T] ~ normal(vol_ar_alpha + vol_rho * f_vol[1:(T-1)], 0.1);
+    f_vol[1] ~ normal(0.5,0.25);
+    f_vol[2:T] ~ normal(vol_ar_alpha + vol_rho * f_vol[1:(T-1)], 0.25);
     
     ar_alpha ~ std_normal();
     rho ~ std_normal();

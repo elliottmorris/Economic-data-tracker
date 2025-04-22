@@ -1,3 +1,6 @@
+# change wd
+cd ~/github/econ-data-tracker
+
 # call model, push output to github
 uv run python -m ./_scripts/01_ingest.py
 Rscript _scripts/02_wrangle_fred.R
