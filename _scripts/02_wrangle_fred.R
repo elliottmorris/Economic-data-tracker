@@ -1,74 +1,13 @@
 source("~/.Rprofile")
 library(tidyverse)
-library(fredr)
-library("quantmod")
 library(zoo)
 library(scales)
 
-# in order to use this program you will need to download a key from FRED and then attach it to your R environment by running:
-# fredr::fredr_set_key()
-# or alternatively adding it to your global ~/.Rprofile document.
-# see more here: https://cran.r-project.org/web/packages/fredr/vignettes/fredr.html
-fredr_set_key(FRED_API_KEY)
+# Import raw data.
+fred_raw <- arrow::read_parquet("./_data/fred.parquet") %>%
+    rename(label=series)
 
-# get economic indicators -----------------------------------------------------
-indicators = tibble(
-  series = c("AHETPI", "CMRMTSPL", "CPIAUCSL",
-             "HOUST", "INDPRO", "PAYEMS", "GDPC1",
-             "UMCSENT", "UNRATE", "W875RX1",
-             "TTLCONS", "RSAFS",
-             "MANEMP", "AMTMNO",
-             'GCEC1', "EXPGSC1","IMPGSC1","BUSINV"),
-  label = c("Avg earnings", "Manf. and trade sales", "CPI",
-            "Housing starts", "Ind. prdct", "Payrolls", "GDP",
-            "Sentiment", "Unemployment", "Income excl transfers",
-            "Total construction spending", "Retail trade and food services sales", 
-            "Manufacturing jobs", "New manufactruing orders",
-            "Gov. expenditures and investment","Exports","Imports",
-            "Business inventories")
-)
-
-# read in data from fred api
-extract_fred = function(x){
-  print(x)
-  out = fredr::fredr_series_observations(series_id = x,
-                                         observation_start = ymd("1945-01-01"), 
-                                         observation_end = Sys.Date()) 
-  #out = out %>% mutate(date = if_else(series_id == "GDPC1", date + 45, date)) # GDP data get recorded with an early date, eg Oct 01 for Q4 (Q4 is Oct 1 - Dec 31)
-  Sys.sleep(1)
-  return(out)
-}
-# extract_fred("AHETPI")
-
-fred_raw = map_dfr(.x = indicators$series,
-                    .f = extract_fred) %>%
-  select(date, series = series_id, value) %>%
-  ungroup() %>%
-  left_join(indicators, by = c("series"))
-
-# download sp500 historical via the quantmod package
-sp500 =  getSymbols("^GSPC", src = "yahoo",from = as_date("1945-01-01"), to = as_date(Sys.Date()),auto.assign = F
-)
-
-SP500 = tibble(date = as_date(rownames(as.data.frame(sp500))),
-               value = as.numeric(sp500$GSPC.Close),
-               series = "SP500",
-               label = "S&P500 close")
-
-fred_raw = bind_rows(fred_raw, SP500)
-fred_raw
-
-# remove uninformative labels
-fred_raw = fred_raw %>%
-  select(-series)
-
-# bind series to df
-fred_raw = 
-  expand_grid(date = as_date(seq.Date(min(fred_raw$date),Sys.Date(),"day")),
-              label = unique(fred_raw$label)) %>%
-  left_join(fred_raw, by = c("label", "date")) %>%
-  arrange(label,date)
-
+# Data cleaning and plotting.
 fred_raw %>%
   na.omit() %>%
   ggplot(., aes(x=date,y=value)) + 

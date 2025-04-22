@@ -1,0 +1,15 @@
+[project]
+name = "economic-data-tracker"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "datetime>=5.5",
+    "dotenv>=0.9.9",
+    "loguru>=0.7.3",
+    "polars>=1.27.1",
+    "pyarrow>=19.0.1",
+    "requests>=2.32.3",
+    "yfinance>=0.2.55",
+]
