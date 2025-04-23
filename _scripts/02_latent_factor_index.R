@@ -177,7 +177,7 @@ fit = model$sample(
   chains = 6,
   parallel_chains = 6,
   iter_warmup = 500,
-  iter_sampling = 250,
+  iter_sampling = 500,
   init = 1,
   refresh = 10
 )
