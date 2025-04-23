@@ -174,10 +174,10 @@ model = cmdstanr::cmdstan_model(
 fit = model$sample(
   seed = as.integer(floor(as.numeric(Sys.time()))),
   data = stan_data,
-  chains = 4,
-  parallel_chains = 4,
-  iter_warmup = 200,
-  iter_sampling = 200,
+  chains = 6,
+  parallel_chains = 6,
+  iter_warmup = 250,
+  iter_sampling = 250,
   init = 1,
   refresh = 10
 )
