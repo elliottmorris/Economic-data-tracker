@@ -2,6 +2,7 @@ library(tidyverse)
 library(cmdstanr)
 library(zoo)
 
+time_divisor = 7
 
 # wrangle data -------------------------------
 # system("Rscript _scripts/01_wrangle_fred.R")
@@ -19,8 +20,7 @@ dat$date = NULL
 min_date = min(dates)
 times = as.numeric(dates - min_date) 
 
-# convert times to weeks
-time_divisor = 7
+# convert times to weeks/months
 times = floor(times / time_divisor) + 1
 
 max_T = max(times)
@@ -48,7 +48,7 @@ training_rows = tibble(t = times, present = times %in% gdp_times) %>%
   ungroup() %>% pull(row)
 length(training_rows)
 # override:
-training_rows = 1:length(times)
+# training_rows = 1:length(times)
 
 # import natl election results ---------------------------------------------
 election_results = read_csv('_data/presidential_results.csv') %>%
@@ -157,7 +157,9 @@ stan_data = list(
   
   N_election_obs = N_election_obs,
   y_potus = y_potus,
-  potus_t = potus_t
+  potus_t = potus_t,
+  
+  time_pred_horizon = 186 / time_divisor
 )
 
 
@@ -174,8 +176,8 @@ model = cmdstanr::cmdstan_model(
 fit = model$sample(
   seed = as.integer(floor(as.numeric(Sys.time()))),
   data = stan_data,
-  chains = 6,
-  parallel_chains = 6,
+  chains = 4,
+  parallel_chains = 4,
   iter_warmup = 500,
   iter_sampling = 500,
   init = 1,
@@ -190,6 +192,7 @@ fit = model$sample(
 
 # plot predictions of gfpand actual as points
 indices = tibble(
+  date = min(dates) + (1:(max_T) * time_divisor),
   econ_index = fit$summary('f',median)$median,
   econ_index_se =  fit$summary('f',sd)$sd,
   f_gdp = fit$summary('F',median)$median,
@@ -200,6 +203,17 @@ indices = tibble(
 
 
 hist(fit$summary('f',median)$median,breaks=100)
+
+# plot index
+gg0 = ggplot(indices, aes(x = date, y = econ_index)) + 
+  geom_line() + 
+  geom_ribbon(aes(ymin = econ_index - econ_index_se*2, ymax = econ_index + econ_index_se*2),alpha=0.2) + 
+  theme_minimal() +
+  labs(x = 'Date',
+       y = 'Economic Index')
+gg0
+ggsave(plot = gg0, filename = '_figures/index-fit.png',width = 6, height = 6,bg = 'white')
+
 
 # predict gdp?
 gg1 = tibble(index = indices$f_gdp[gdp_times], 

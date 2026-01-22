@@ -18,6 +18,7 @@ data {
     int<lower=1> N_election_obs;
     vector[N_election_obs] y_potus;             // Observed gdp growth 
     array[N_election_obs] int<lower=1,upper=T> potus_t;        // time at observation
+    int<lower=0> time_pred_horizon; // divisor for indexing weeks/months in prediction
 }
 
 parameters {
@@ -40,9 +41,9 @@ parameters {
     real<lower=1e-06, upper = 10> ar_sigma;
     
     // robust regression to predict GDP given factor
-    real<lower=0,upper=10> alpha_raw;
+    real<lower=0,upper=5> alpha_raw;
     real<lower=1e-06, upper=1> alpha_scale;
-    real<lower=0,upper=10> beta_raw;
+    real<lower=0,upper=5> beta_raw;
     real<lower=1e-06, upper=1> beta_scale;
     real<lower=0,upper=2> gamma;
     real<lower=1e-06,upper=10> y_gdp_sigma;
@@ -82,7 +83,7 @@ transformed parameters {
     // }
     vector[N_gdp_obs] f_quarterly_gdp_t = f[gdp_t];
     
-    real alpha = 2 + (alpha_raw * alpha_scale);
+    real alpha = (alpha_raw * alpha_scale);
     real beta = beta_raw * beta_scale;
     
     // potus regression
@@ -91,7 +92,7 @@ transformed parameters {
     vector[N_election_obs] y_potus_hat;
     // predict vote with average f value over last 6 months
     for(i in 1:N_election_obs){
-      y_potus_hat[i] = alpha_potus + beta_potus * mean(f[(potus_t[i]-26):potus_t[i]]);
+      y_potus_hat[i] = alpha_potus + beta_potus * mean(f[(potus_t[i] - time_pred_horizon):potus_t[i]]);
     }
 }
 
@@ -125,7 +126,7 @@ model {
     
     // Latent factor: vectorized AR(1) specifications. informative prior 
     f ~ cauchy(0,1);
-    f ~ student_t(4,prior_f_t,1);
+    f ~ student_t(7,prior_f_t,0.5);
     
     vol_ar_alpha ~ std_normal();
     vol_rho ~ std_normal();
@@ -136,7 +137,7 @@ model {
     rho ~ std_normal();
     ar_sigma ~ std_normal();
     f_std[1] ~ std_normal();
-    f_std[2:T] ~ student_t(4, ar_alpha + rho * f_std[1:(T-1)], f_vol[2:T]); // ar_sigma); 
+    f_std[2:T] ~ student_t(7, ar_alpha + rho * f_std[1:(T-1)], f_vol[2:T]); // ar_sigma); 
 
     // Likelihood
     //// economic observations 
